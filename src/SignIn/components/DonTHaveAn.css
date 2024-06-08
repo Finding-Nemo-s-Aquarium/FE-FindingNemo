@@ -1,0 +1,27 @@
+.dontHaveAn {
+    white-space: pre-wrap;
+}
+.signUp {
+    color: #2845a3;
+}
+.dontHaveAnContainer1 {
+    width: 100%;
+}
+.dontHaveAnContainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    align-items: center;
+}
+.dontHaveAnAccountSignUp {
+    width: 100%;
+    position: relative;
+    height: 37px;
+    text-align: center;
+    font-size: 25px;
+    color: #999;
+    font-family: Kanit;
+}

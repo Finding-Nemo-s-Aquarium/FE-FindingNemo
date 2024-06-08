@@ -1,0 +1,26 @@
+.finding-nemo {
+    height: 64px;
+    position: relative;
+    width: 262px;
+}
+
+.finding-nemo .text-wrapper {
+    text-shadow: var(--navigation-bar);
+    color: #ffffff;
+    font-family: "Luckiest Guy-Regular", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    height: 64px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    text-shadow: 4px 9px 9.4px #00000052;
+    top: -1px;
+    width: 262px;
+}
+
+.finding-nemo:hover .text-wrapper {
+    color: #ff9500;
+}
