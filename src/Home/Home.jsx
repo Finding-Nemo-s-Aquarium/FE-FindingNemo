@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Navigation from "../Before_Navigation/Navigation";
+import { useState, useEffect } from 'react';
+// import Navigation from "../Before_Navigation/BeforeNavigation";
+import Navigation from "../After_Navigation/AfterNavigation";
 import './Home.css';
 
 const Home = () => {
