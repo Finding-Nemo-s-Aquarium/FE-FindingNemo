@@ -3,109 +3,73 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
+  width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
 }
 
-.navigation .group {
-  height: 87px;
-  position: relative;
-  top: 27px;
-  width: 1312px;
+.navigation .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin-top: 70px; /* 네비게이션 바의 상단 여백 */
+  
+}
+
+.finding-nemo {
   display: flex;
   align-items: center;
 }
 
-.navigation .overlap-group {
-  height: 105px;
-  position: relative;
+.finding-nemo .finding-nemo-text {
+  margin-left: 10px;
 }
 
-.navigation .group-2 {
-  height: 67px;
-  left: 0;
-  position: absolute;
-  top: 12px;
-  width: 1312px;
-}
-
-.navigation .overlap-2 {
-  height: 65px;
-  left: -5px;
-  position: absolute;
-  top: 3px;
-  width: 299px;
-}
-
-.navigation .finding-nemo-instance {
-  left: 37px !important;
-  position: absolute !important;
-  top: 0 !important;
-}
-
-.navigation .clownfish {
-  height: 58px;
-  left: 0;
+.finding-nemo .clownfish {
+  margin-top: -30px;
+  height: 60px;
   object-fit: cover;
-  position: absolute;
-  top: 8px;
-  width: 58px;
 }
 
-.navigation .group-3 {
-  height: 59px;
-  left: 338px;
-  position: absolute;
-  top: 0;
-  width: 974px;
+.navigation .menu {
+  margin-left: -800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px; /* 메뉴 항목 간의 간격 */
+  
 }
 
-.navigation .SHOP-instance {
-  left: 0 !important;
-  position: absolute !important;
-  top: 3px !important;
+.navigation .SIGN-IN {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.navigation .MAKE-instance {
-  left: 178px !important;
-  position: absolute !important;
-  top: 3px !important;
-}
-
-.navigation .overlap-group-2 {
-  height: 59px;
-  left: 796px;
-  position: absolute;
-  top: 0;
-  width: 178px;
-}
-
-.navigation .rectangle {
+.SIGN-IN .rectangle {
+  margin-top: -20px;
   background-color: #ffffff;
   border-radius: 50px;
-  height: 59px;
-  left: 10px;
-  position: absolute;
-  top: 0;
-  width: 158px;
+  height: 60px;
+  width: 200px;
+  position: absolute;  /* 사각형을 텍스트와 함께 위치 */
+
 }
 
-.navigation .SIGN-IN-instance {
-  left: 0 !important;
-  position: absolute !important;
-  top: 2px !important;
-}
-
-.navigation .design-component-instance-node {
-  color: #2845a3 !important;
+.SIGN-IN .SIGN-IN-instance {
+  color: #2845A3;
+  margin-left: 10px;
+  z-index: 1;
 }
 
 .navigation .img {
-  height: 105px;
-  left: 1012px;
-  position: absolute;
-  top: 0;
-  width: 157px;
+  height: 30px;
+  margin-left: 20px;
 }
 
 .info-bar {
