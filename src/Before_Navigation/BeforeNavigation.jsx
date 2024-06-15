@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import FindingNemo from "./components/FindingNemo";
 import Make from "./components/Make";
 import Shop from "./components/Shop";
@@ -5,11 +6,18 @@ import SignIn from "./components/SignIn";
 import "./BeforeNavigation.css";
 
 const Navigation = () => {
+  const navigate = useNavigate();
+
+  const handleFindingNemoClick = () => {
+    navigate('/home');
+  };
+
   return (
     <div className="navigation">
       <div className="text">
+        
+        <div className="finding-nemo" onClick={handleFindingNemoClick}>
 
-        <div className="finding-nemo">
           <img className="clownfish" alt="Clownfish" src="img/clownfish.png" />
           <FindingNemo className="finding-nemo-text" />
         </div>
