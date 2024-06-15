@@ -8,16 +8,13 @@
     text-shadow: var(--navigation-bar);
     color: #ffffff;
     font-family: "NATS-Regular", Helvetica;
-    font-size: 32px;
+    font-size: 18px;
     font-weight: 400;
     height: 56px;
-    left: 0;
-    letter-spacing: 0;
     line-height: normal;
     position: absolute;
     text-align: center;
     text-shadow: 4px 9px 9.4px #00000052;
-    top: -1px;
     width: 178px;
 }
 
