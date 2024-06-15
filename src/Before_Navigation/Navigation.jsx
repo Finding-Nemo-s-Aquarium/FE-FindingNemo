@@ -3,6 +3,7 @@ import FindingNemo from "./components/FindingNemo";
 import Make from "./components/Make";
 import Shop from "./components/Shop";
 import SignIn from "./components/SignIn";
+import Cart from "./components/Cart";
 import "./Navigation.css";
 
 const Navigation = () => {
@@ -20,10 +21,13 @@ const Navigation = () => {
             <div className="group-3">
               <Shop className="SHOP-instance" />
               <Make className="MAKE-instance" />
+              <Cart className="CART-instance"/>
+
               <div className="overlap-group-2">
                 <div className="rectangle" />
                 <SignIn className="SIGN-IN-instance" />
               </div>
+
             </div>
           </div>
 
