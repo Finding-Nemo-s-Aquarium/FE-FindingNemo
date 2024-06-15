@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';// eslint-disable-line no-unused-vars
 import SignIn from './SignIn/SignIn.jsx';
 import Home from './Home/Home.jsx';
 import Shop from './Shop/Shop.jsx';
