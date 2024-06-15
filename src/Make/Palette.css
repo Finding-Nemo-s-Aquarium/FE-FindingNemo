@@ -1,0 +1,45 @@
+.palette {
+  display: flex;
+
+}
+
+.category-button {
+  width: 30%;
+}
+
+.palette-button {
+  display: block;
+  width: 100%;
+  height: 18%;
+  padding: 10px;
+  margin-bottom: 10%;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+
+}
+
+.palette-button.selected {
+  background-color: #d0d0d0;
+}
+
+.image-list {
+  width: 70%;
+  border: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  overflow: scroll;
+
+}
+
+.image-item {
+  margin: 10px;
+  cursor: pointer;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.image-item:hover {
+opacity: 70%;}

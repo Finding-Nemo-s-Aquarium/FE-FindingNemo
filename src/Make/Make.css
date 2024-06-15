@@ -1,0 +1,51 @@
+
+/* App.css */
+.Make{
+  margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.Making {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+
+}
+
+.head {
+  flex: 0 1 50px; /* 헤더 높이 */
+  background-color: #f0f0f0;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  overflow: hidden; /* body 전체가 스크롤되지 않도록 숨김 */
+  border: 2px solid black;
+  padding: 10px;
+  position: relative;
+
+}
+
+.canvas {
+  flex-direction: row;
+  border: 2px solid black;
+  flex: 2;
+  margin-bottom: 10px;
+  height: 100%;
+  margin-right: 5%;
+}
+
+.palette {
+  flex-direction: row;
+  flex: 1;
+  overflow: auto; /* 스크롤 가능하게 설정 */
+}
+
+.footer {
+
+  border: 2px solid black;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
