@@ -73,19 +73,3 @@
   flex-direction: column;
   align-items: center;
 }
-
-.info-bar .info-links,
-.info-bar .legal-links {
-  margin: 10px 0;
-}
-
-.info-bar .info-links a,
-.info-bar .legal-links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-.info-bar .copyright {
-  margin-top: 10px;
-}
