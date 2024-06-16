@@ -12,7 +12,7 @@ return (
     <div className="Cart">
       <img id="cart-background" src="img2/cart-background.png" alt="배경화면" />
       <div id="cart-body">
-        <h2>장바구니</h2>
+        <h2>CART</h2>
         <ul>
           {dummyData.map(item => (
             <li key={item.id}>

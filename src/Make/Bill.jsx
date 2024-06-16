@@ -8,7 +8,7 @@ const Bill = ({ images, totalPrice }) => {
   return (
     <div className="bill">
       <div className="bill-image-list">
-        <h1>Selected Merchandise</h1>
+        <p style={{margin:0, fontSize:'30px'}}>Selected Merchandise</p>
         <div className="bill-image-container">
           {images.map(image => (
             <div key={image.id} className="bill-image-item">
