@@ -6,6 +6,7 @@ import "./Shop.css";
 
 const Shop = ({ isLoggedIn }) => {
     const [selectedCategory, setSelectedCategory] = useState(null);
+    const [selectedItem, setSelectedItem] = useState(null);
 
     const categories = {
         Aquarium: [
@@ -30,14 +31,19 @@ const Shop = ({ isLoggedIn }) => {
             { name: "Volcanic stone", img: "item/Volcanic_stone.png" }
         ],
         Flooring: [
-            { name: "Black pebble", img: "item/black_pebble.png" },
-            { name: "White pebble", img: "item/white_pebble.png" },
-            { name: "Multicolored_pebble", img: "item/Multicolored_pebble.png" }
+            { name: "Black pebble", img: "item/Black_pebble.png" },
+            { name: "White pebble", img: "item/White_pebble.png" },
+            { name: "Multicolored pebble", img: "item/Multicolored_pebble.png" }
         ]
     };
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
+        setSelectedItem(null); // 선택된 아이템 초기화
+    };
+
+    const handleItemClick = (item) => {
+        setSelectedItem(item);
     };
 
     return (
@@ -59,15 +65,26 @@ const Shop = ({ isLoggedIn }) => {
                         {selectedCategory === category && (
                             <div className="category-items">
                                 {categories[category].map(item => (
-                                    <div className="category-item" key={item.name}>{item.name}</div>
+                                    <div 
+                                        className="category-item" 
+                                        key={item.name} 
+                                        onClick={() => handleItemClick(item)}
+                                    >
+                                        {item.name}
+                                    </div>
                                 ))}
                             </div>
                         )}
                     </div>
                 ))}
             </div>
+
             <div className="gallery">
-                {selectedCategory && categories[selectedCategory].map(item => (
+                {selectedItem ? (
+                    <div className="gallery-item">
+                        <img src={selectedItem.img} alt={selectedItem.name} />
+                    </div>
+                ) : selectedCategory && categories[selectedCategory].map(item => (
                     <div className="gallery-item" key={item.name}>
                         <img src={item.img} alt={item.name} />
                     </div>
