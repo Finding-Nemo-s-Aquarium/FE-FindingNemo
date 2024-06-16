@@ -1,8 +1,15 @@
+import { useNavigate } from 'react-router-dom';
+import "./Profile.css"
+
 const Profile = () => {
-    return(
-        <div>
-            
-        </div>
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/profile');
+    };
+
+    return (
+            <div className="PROFILE" onClick={handleClick}></div>
     );
 };
 
