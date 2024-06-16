@@ -6,11 +6,11 @@ const SignInButton = ({ className, handleSignIn }) => {
   const navigate = useNavigate();
 
   const handleClick = async () => {
-    const email = document.getElementById('emailInput').value;
+    const username = document.getElementById('usernameInput').value;
     const password = document.getElementById('passwordInput').value;
 
     const signinData = {
-      username: email,
+      username: username,
       password: password,
     };
 
