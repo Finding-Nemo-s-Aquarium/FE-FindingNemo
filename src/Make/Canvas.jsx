@@ -18,20 +18,19 @@ const Canvas = ({ images, handleImageDelete, handleImageToFront, handleContextMe
 
   return (
     <div className="canvas">
-      {/* images 배열을 순회하며 각 이미지에 Draggable 컴포넌트 적용 */}
       {images.map((image, index) => (
         <Draggable
-          key={image.id} // 이미지 고유 식별자를 key로 사용
-          defaultPosition={{ x: image.x, y: image.y }} // 이미지의 초기 위치 설정
-          onStop={(e, data) => handleStop(e, data, index)} // 드래그 종료 시 handleStop 함수 호출
+          key={image.id}
+          defaultPosition={{ x: image.x, y: image.y }}
+          onStop={(e, data) => handleStop(e, data, index)}
         >
           <div
             className="image-container"
-            style={{ zIndex: index, position: 'absolute', height: "100px", width: "100px" }}
-            onContextMenu={(e) => handleContextMenu(e, image.id, index)} // 이미지 우클릭 시 handleContextMenu 함수 호출
+            style={{ zIndex: image.zIndex, position: 'absolute', height: "100px", width: "100px" }}
+            onContextMenu={(e) => handleContextMenu(e, image.id, index)}
           >
-            <img src={image.src} alt="이미지" onDragStart={handleDragStart} /> {/* 이미지 요소 */}
-            <button onClick={() => handleImageDelete(image.id, image.price)}>삭제</button> {/* 삭제 버튼 */}
+            <img src={image.src} alt="이미지" onDragStart={handleDragStart} />
+            <button onClick={() => handleImageDelete(image.id, image.price)}>삭제</button>
           </div>
         </Draggable>
       ))}
