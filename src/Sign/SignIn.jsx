@@ -30,7 +30,7 @@ const SignIn = ({ setIsLoggedIn }) => {
 
           <div className="NAME">
             <div className="NAME-text">NAME</div>
-            <input className="input-box" type="text" id="nameInput" name="name" placeholder="Enter your name" required />
+            <input className="input-box" type="text" id="usernameInput" name="username" placeholder="Enter your username" required />
           </div>
 
           <div className="PASSWORD">

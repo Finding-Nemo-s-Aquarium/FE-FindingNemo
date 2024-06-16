@@ -1,14 +1,39 @@
 import { useNavigate } from 'react-router-dom';
 import BackToHome from "./components/BackToHome";
 import SignUpButton from "./components/SignUpButton";
+import axios from 'axios';
 import "./SignUp.css";
 
 const SignUp = () => {
   const navigate = useNavigate();
 
-  const handleSignUp = () => {
-    // 회원가입 로직 구현
-    navigate('/signin');
+  const handleSignUp = async () => {
+    const username = document.getElementById('usernameInput').value;
+    const email = document.getElementById('emailInput').value;
+    const password = document.getElementById('passwordInput').value;
+    const name = document.getElementById('nameInput').value;
+    const address = document.getElementById('addressInput').value;
+    const phone = document.getElementById('phoneInput').value;
+
+    const userData = {
+      username,
+      email,
+      password,
+      name,
+      address,
+      phone
+    };
+
+    try {
+      const response = await axios.post('http://localhost:8080/auth/signup', userData);
+      if (response.status === 201) {
+        navigate('/signin');
+      } else {
+        console.error('Sign up failed:', response.data);
+      }
+    } catch (error) {
+      console.error('An error occurred during sign up:', error);
+    }
   };
 
   return (
