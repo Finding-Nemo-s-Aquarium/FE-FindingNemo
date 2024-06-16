@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Palette from './Palette.jsx';
 import Canvas from './Canvas.jsx';
@@ -7,16 +7,21 @@ import BeforeNavigation from "../Navigation/BeforeNavigation";
 import AfterNavigation from "../Navigation/AfterNavigation";
 import './Make.css';
 
-Make.propTypes = {
-  isLoggedIn: PropTypes.bool.isRequired,
+const categoryZIndex = {
+  Fishbowl: 100,
+  Floor: 200,
+  Plant: 300,
+  Stone: 400,
+  Fish: 500,
 };
 
 function Make({ isLoggedIn }) {
   const [images, setImages] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const handleImageSelect = (src, price) => {
-    const newImage = { src, id: Date.now(), x: 0, y: 0, price };
+  const handleImageSelect = (src, price, category) => {
+    const zIndex = categoryZIndex[category] + images.filter(img => img.category === category).length;
+    const newImage = { src, id: Date.now(), x: 0, y: 0, price, zIndex, category };
     setImages([...images, newImage]);
     setTotalPrice(prevTotal => prevTotal + price);
   };
@@ -77,10 +82,9 @@ function Make({ isLoggedIn }) {
     <div className='Make'>
       <div className="head">
         {isLoggedIn ? <AfterNavigation /> : <BeforeNavigation />}
-          </div>
+      </div>
       <div className='Making'>
         <div className="Edit">
-          
           <div className="body">
             <Canvas
               images={images}
@@ -100,5 +104,9 @@ function Make({ isLoggedIn }) {
     </div>
   );
 }
+
+Make.propTypes = {
+  isLoggedIn: PropTypes.bool.isRequired,
+};
 
 export default Make;
