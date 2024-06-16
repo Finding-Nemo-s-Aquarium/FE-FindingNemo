@@ -1,4 +1,3 @@
-import React from 'react';// eslint-disable-line no-unused-vars
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import "./Shop.css";
@@ -11,7 +10,7 @@ const Shop = ({ className }) => {
     }
   return (
     <div className="SHOP">
-      <div className={`text-wrapper ${className}`} onClick={handleClick}>Shop</div>;
+      <div className={`text-wrapper ${className}`} onClick={handleClick}>SHOP</div>
     </div>
   );
 };

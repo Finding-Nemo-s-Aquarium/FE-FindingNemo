@@ -1,8 +1,19 @@
+/* 기본 여백 제거 */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .background {
     background-image: url(img/main_nemo.png);
-    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
     width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    padding-bottom: 300px; /* main_nemo 사진 크기만큼의 빈 공간 */
+    box-shadow: inset 0 100px 200px rgba(0, 0, 0, 0.3); /* 내부 그림자 효과 추가 */
 }

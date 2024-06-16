@@ -1,4 +1,16 @@
-.backToHome1 {
+@import url('https://fonts.googleapis.com/css2?family=Baloo:wght@400&display=swap');
+
+.backToHome {
+    width: 100%;
+    position: relative;
+    height: 37px;
+    text-align: center;
+    font-size: 19px;
+    color: #2845a3;
+    font-family: Kanit;
+}
+
+.backToHome-text {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -7,13 +19,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Baloo', Helvetica, sans-serif;
+    font-weight: bold;
 }
-.backToHome {
-    width: 100%;
-    position: relative;
-    height: 37px;
-    text-align: center;
-    font-size: 25px;
-    color: #2845a3;
-    font-family: Kanit;
+
+.backToHome:hover .backToHome-text {
+    color: #ff9500;
+
 }

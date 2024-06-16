@@ -1,113 +1,84 @@
-import { useState, useCallback } from 'react';
-import Image from "./components/Image.module";
-import PortalPopup from "./components/PortalPopup.module";
-import './Shop.css';
+import PropTypes from 'prop-types';
+import { useState } from 'react';
+import BeforeNavigation from "../Navigation/BeforeNavigation";
+import AfterNavigation from '../Navigation/AfterNavigation';
+import "./Shop.css";
 
+const Shop = ({ isLoggedIn }) => {
+    const [selectedCategory, setSelectedCategory] = useState(null);
 
-const Shop = () => {
-    const [isFrameOpen, setFrameOpen] = useState(false);
+    const categories = {
+        Aquarium: [
+            { name: "Fish tank", img: "img2/fishbowl1.png" }, // fish_tank
+            // { name: "Fish bowl", img: "img2/fish_bowl.png" } // fish_bowl
+        ],
+        Fish: [
+            // { name: "Guppy", img: "img2/guppy.png" }, // guppy
+            { name: "Goldfish", img: "img2/goldfish.png" }, // goldfish
+            { name: "Betta", img: "img2/beta.png" }, // betta
+            { name: "Angelfish", img: "img2/angelfish.png" }, // angelfish
+            { name: "Tetra", img: "img2/tetra.png" } // tetra
+        ],
+        Plant: [
+            // { name: "Blyxa japonica", img: "img2/blyxa_japonica.png" }, // blyxa_japonica
+            { name: "American water sprite", img: "img2/america.png" }, // american_water_sprite
+            { name: "Vallisneria", img: "img2/balis.png" } // vallisneria
+        ],
+        Stone: [
+            { name: "Egg stone", img: "img2/eggstone.png" }, // egg_stone
+            { name: "Blue dragon stone", img: "img2/bluedragonstone.png" }, // blue_dragon_stone
+            { name: "Volcanic stone", img: "img2/volcanostone.png" } // volcanic_stone
+        ],
+        Flooring: [
+            { name: "Black sand", img: "img2/blackfloor.png" }, // black_sand
+            { name: "White sand", img: "img2/whitefloor.png" }, // white_sand
+            { name: "Multicolored sand", img: "img2/fivecolorfloor.png" } // multicolored_sand
+        ]
+    };
 
-    const openFrame = useCallback(() => {
-        setFrameOpen(true);
-    }, []);
+    const handleCategoryClick = (category) => {
+        setSelectedCategory(category);
+    };
 
-    const closeFrame = useCallback(() => {
-        setFrameOpen(false);
-    }, []);
+    return (
+        <div className="Background">
+            <div className="navigation">
+                {isLoggedIn ? <AfterNavigation /> : <BeforeNavigation />}
+            </div>
 
-    return (<>
-        <div className="div">
-            <img className="topEllipseIcon" alt="" src="Top Ellipse.png" />
-            <div className="groupParent">
-                <div className="groupContainer">
-                    <div className="groupWrapper">
-                        <div className="shopParent">
-                            <div className="shop">
-                                <div className="shop1">SHOP</div>
-                            </div>
-                            <div className="make">
-                                <div className="shop1">MAKE</div>
-                            </div>
+            <div className="top">
+                <img src="img/main_nemo.png" alt="Clownfish" className="top-image" />
+            </div>
+
+            <div className="category-bar">
+                {Object.keys(categories).map(category => (
+                    <div className="category" key={category}>
+                        <div className="category-title" onClick={() => handleCategoryClick(category)}>
+                            {category}
                         </div>
+                        {selectedCategory === category && (
+                            <div className="category-items">
+                                {categories[category].map(item => (
+                                    <div className="category-item" key={item.name}>{item.name}</div>
+                                ))}
+                            </div>
+                        )}
                     </div>
-                    <div className="parent">
-                        <img className="icon" alt="" src="제목_없는_아트워크 3.png" />
-                        <img className="icon1" alt="" src="제목_없는_아트워크 3 1.png" />
-                        <img className="icon2" alt="" src="제목_없는_아트워크 2 1.png" />
-                    </div>
-                </div>
-                <div className="findingNemoParent">
-                    <div className="findingNemo">
-                        <div className="shop1">Finding Nemo</div>
-                    </div>
-                    <img className="clownfishIcon" alt="" src="img/clownfish.png" />
-                </div>
+                ))}
             </div>
-            <div className="fishParent">
-                <div className="fish">Fish</div>
-                <div className="fishbowl">Fishbowl</div>
-                <div className="plant">Plant</div>
-                <div className="stone">Stone</div>
-                <div className="flooring">Flooring</div>
+            <div className="gallery">
+                {selectedCategory && categories[selectedCategory].map(item => (
+                    <div className="gallery-item" key={item.name}>
+                        <img src={item.img} alt={item.name} />
+                    </div>
+                ))}
             </div>
-            <div className="guppyParent">
-                <div className="guppy">Guppy</div>
-                <div className="goldfish">Goldfish</div>
-                <div className="betta">Betta</div>
-                <div className="angelfish">
-                    <span className="angelfishTxt">
-                        <span>Angelfish</span>
-                        <span className="span"></span>
-                    </span>
-                </div>
-                <div className="tetra">Tetra</div>
-            </div>
-            <div className="groupDiv">
-                <div className="boxParent">
-                    <div className="box" onClick={openFrame}>
-                        <div className="boxChild" />
-                    </div>
-                    <div className="box1">
-                        <div className="boxChild" />
-                    </div>
-                    <div className="box2">
-                        <div className="boxChild" />
-                    </div>
-                    <div className="box3">
-                        <div className="boxChild" />
-                    </div>
-                </div>
-                <div className="boxGroup">
-                    <div className="box4">
-                        <div className="boxChild" />
-                    </div>
-                    <div className="box1">
-                        <div className="boxChild" />
-                    </div>
-                    <div className="box2">
-                        <div className="boxChild" />
-                    </div>
-                    <div className="box3">
-                        <div className="boxChild" />
-                    </div>
-                </div>
-            </div>
-            <img className="image23Icon" alt="" src="image 23.png" />
         </div>
-        {isFrameOpen && (
-            <PortalPopup
-                overlayColor="rgba(113, 113, 113, 0.3)"
-                placement="Centered"
+    );
+};
 
-
-
-
-
-                onOutsideClick={closeFrame}
-            >
-                <Image onClose={closeFrame} />
-            </PortalPopup>
-        )}</>);
+Shop.propTypes = {
+    isLoggedIn: PropTypes.bool.isRequired,
 };
 
 export default Shop;

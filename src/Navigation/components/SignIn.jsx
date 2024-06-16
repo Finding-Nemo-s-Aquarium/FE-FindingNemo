@@ -11,7 +11,9 @@ const SignIn = ({ className }) => {
 
     return (
         <div className="SIGN-IN">
-            <div className={`text-wrapper ${className}`} onClick={handleClick}>SIGN IN</div>
+            <div className={`text-wrapper ${className}`} onClick={handleClick}>
+                <span>SIGN IN</span>
+            </div>
         </div>
     );
 };

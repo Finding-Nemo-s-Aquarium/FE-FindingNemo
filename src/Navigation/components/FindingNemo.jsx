@@ -4,7 +4,7 @@ import "./FindingNemo.css";
 const FindingNemo = ({ className }) => {
   return (
     <div className="finding-nemo">
-      <div className={`text-wrapper ${className}`}>Finding Nemo</div>;
+      <div className={`text-wrapper ${className}`}>Finding Nemo</div>
     </div>
   );
 };

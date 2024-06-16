@@ -11,7 +11,7 @@ const Make = ({ className }) => {
 
     return (
         <div className="MAKE">
-            <div className={`text-wrapper ${className}`} onClick={handleClick}>Make</div>;
+            <div className={`text-wrapper ${className}`} onClick={handleClick}>MAKE</div>
         </div>
     );
 };

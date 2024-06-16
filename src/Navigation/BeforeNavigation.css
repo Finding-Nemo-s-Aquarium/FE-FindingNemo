@@ -1,0 +1,56 @@
+.BeforeNavigation .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin-top: 50px; /* 네비게이션 바의 상단 여백 */
+}
+
+.BeforeNavigation .finding-nemo {
+  display: flex;
+  align-items: center;
+}
+
+.BeforeNavigation .finding-nemo .clownfish {
+  margin-top: -35px;
+  margin-left: 150px; /* Finding Nemo와 clownfish의 왼쪽 간격 */
+  height: 40px;
+  object-fit: cover;
+}
+
+.BeforeNavigation .finding-nemo .finding-nemo-text {
+  margin-top: 0px;
+  margin-left: -40px; /* clownfish와 Finding Nemo 사이의 간격 */
+  white-space: nowrap; /* 텍스트를 한 줄로 유지 */
+}
+
+.BeforeNavigation .menu {
+  margin-top: -10px;
+  margin-left: 200px; /* Finding Nemo와 Shop 사이의 간격 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px; /* Shop과 Make 사이의 간격 */
+}
+
+.BeforeNavigation .Magnifier {
+  margin-top: -40px;
+  height: 70px; /* Magnifier의 크기 */
+  margin-left: 320px; /* menu와 Magnifier 사이의 간격 */
+}
+
+.BeforeNavigation .SIGN-IN .rectangle {
+  margin-top: -10px;
+  margin-left: -10px; /*Magnifier와 SIGN IN rectangle 사이의 간격*/
+  background-color: #ffffff;
+  border-radius: 50px;
+  height: 40px;
+  width: 120px;
+  position: absolute; /* 사각형을 텍스트와 함께 위치 */
+}
+
+.BeforeNavigation .SIGN-IN .SIGN-IN-instance {
+  margin-top: -8px;
+  margin-left: -38px;
+  z-index: 1;
+}

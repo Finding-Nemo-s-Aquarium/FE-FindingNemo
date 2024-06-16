@@ -10,7 +10,7 @@ const BackToHome = () => {
   }
   return (
     <div className="backToHome">
-      <div className="backToHome1" onClick={handleClick}>Back to home</div>
+      <div className="backToHome-text" onClick={handleClick}>Back to home</div>
     </div>);
 };
 
