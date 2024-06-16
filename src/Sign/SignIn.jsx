@@ -29,7 +29,7 @@ const SignIn = ({ setIsLoggedIn }) => {
           </div>
 
           <div className="NAME">
-            <div className="NAME-text">Name</div>
+            <div className="NAME-text">NAME</div>
             <input className="input-box" type="text" id="nameInput" name="name" placeholder="Enter your name" required />
           </div>
 
@@ -48,11 +48,11 @@ const SignIn = ({ setIsLoggedIn }) => {
         </div>
 
         <img className="sign-goldfish-rectangle" alt="sign-goldfish" src="img/sign_goldfish.jpg" />
-
+        
         <div className="BACKTO">
           <BackToHome className="back-to-home-instance" property1="default" />
         </div>
-        
+
       </div>
     </div>
   );
