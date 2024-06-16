@@ -55,7 +55,7 @@ const Bill = ({ images, totalPrice }) => {
           <p id="comment">Total Price:</p>
           <p id="result">{totalPrice}$</p>
         </div>
-        <button id="Purchase" onClick={handlePurchase}>Purchase</button>
+        <button id="Purchase" onClick={handlePurchase}></button>
       </div>
     </div>
   );
