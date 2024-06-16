@@ -16,7 +16,7 @@ function App() {
           <Route path="/home" element={<Home isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/signin" element={<SignIn setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/shop" element={<Shop isLoggedIn={isLoggedIn} />} />
-          <Route path="/make" element={<Make />} />
+          <Route path="/make" element={<Make isLoggedIn={isLoggedIn} />} />
           <Route path="/" element={<Home isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/cart" element={<Cart />}/>
         </Routes>
