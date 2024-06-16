@@ -2,13 +2,14 @@ import { useNavigate } from 'react-router-dom';
 import FindingNemo from "./components/FindingNemo";
 import Make from "./components/Make";
 import Shop from "./components/Shop";
+import Magnifier from "./components/Magnifier";
 import SignIn from "./components/SignIn";
 import "./BeforeNavigation.css";
 
 const BeforeNavigation = () => {
   const navigate = useNavigate();
 
-  const handleFindingNemoClick = () => {
+  const handleFindingNemo = () => {
     navigate('/home');
   };
 
@@ -16,7 +17,7 @@ const BeforeNavigation = () => {
     <div className="BeforeNavigation">
       <div className="text">
 
-        <div className="finding-nemo" onClick={handleFindingNemoClick}>
+        <div className="finding-nemo" onClick={handleFindingNemo}>
           <img className="clownfish" alt="Clownfish" src="img/logo_clownfish.png" />
           <FindingNemo className="finding-nemo-text" />
         </div>
@@ -26,9 +27,10 @@ const BeforeNavigation = () => {
           <Make className="MAKE-instance" />
         </div>
 
-        <img className="Magnifier" alt="Magnifier" src="img/white_magnifier.png" />
+        <Magnifier className="MAGNIFIER-instance" />
+
         <div className="SIGN-IN">
-          <div className="rectangle" />
+          <div className="SIGN-IN-rectangle" />
           <SignIn className="SIGN-IN-instance" />
         </div>
 
