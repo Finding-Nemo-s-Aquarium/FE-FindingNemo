@@ -1,27 +1,24 @@
-.dontHaveAn {
-    white-space: pre-wrap;
-}
-.signUp {
-    color: #2845a3;
-}
-.dontHaveAnContainer1 {
-    width: 100%;
-}
-.dontHaveAnContainer {
+.dontHaveAnAccountSignUp {
     position: absolute;
     height: 100%;
     width: 100%;
-    top: 0%;
+    top: 210px;
     left: 0%;
     display: flex;
     align-items: center;
-}
-.dontHaveAnAccountSignUp {
     width: 100%;
     position: relative;
-    height: 37px;
+    height: 350px;
     text-align: center;
-    font-size: 25px;
-    color: #999;
+    font-size: 18px;
     font-family: Kanit;
+}
+
+.dontHaveAn {
+    color: #999;
+    white-space: pre-wrap;
+}
+
+.signUp {
+    color: #2845a3;
 }
