@@ -19,6 +19,7 @@
     text-align: center;
     text-shadow: 30px 25px 9.4px #00000052;
     width: 178px;
+    cursor: pointer;
 }
 
 .SIGN-IN:hover .text-wrapper {

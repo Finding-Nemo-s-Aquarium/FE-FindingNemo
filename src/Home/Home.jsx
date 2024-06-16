@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types'
-import BeforeNavigation from "../Navigation/BeforeNavigation"
-import AfterNavigation from "../Navigation/AfterNavigation"
-import './Home.css'
+import PropTypes from 'prop-types';
+import BeforeNavigation from "../Navigation/BeforeNavigation";
+import AfterNavigation from "../Navigation/AfterNavigation";
+import './Home.css';
 
-const Home = ({ isLoggedIn, setIsLoggedIn }) => {
+const Home = ({ isLoggedIn }) => {
     const [showInfo, setShowInfo] = useState(false);
 
     const handleScroll = () => {
@@ -36,7 +36,6 @@ const Home = ({ isLoggedIn, setIsLoggedIn }) => {
 
 Home.propTypes = {
     isLoggedIn: PropTypes.bool.isRequired,
-    setIsLoggedIn: PropTypes.func.isRequired,
 };
 
 export default Home;

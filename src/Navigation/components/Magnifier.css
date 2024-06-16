@@ -1,9 +1,9 @@
-.PROFILE {
+.MAGNIFIER {
     position: relative;
     margin-top: -25px;
     height: 35px;
     width: 35px;
-    background-image: url('img/white_profile.png');
+    background-image: url('img/white_magnifier.png');
     background-size: contain;
     /* cover에서 contain으로 변경하여 이미지가 컨테이너에 맞게 조정되도록 함 */
     background-repeat: no-repeat;
@@ -12,6 +12,6 @@
     /* 클릭 가능한 커서 모양 */
 }
 
-.PROFILE:hover {
-    background-image: url('img/orange_profile.png');
+.MAGNIFIER:hover {
+    background-image: url('img/orange_magnifier.png');
 }

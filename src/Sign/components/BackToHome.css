@@ -21,9 +21,9 @@
     justify-content: center;
     font-family: 'Baloo', Helvetica, sans-serif;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .backToHome:hover .backToHome-text {
     color: #ff9500;
-
 }

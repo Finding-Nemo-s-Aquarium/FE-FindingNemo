@@ -18,6 +18,7 @@
     text-align: center;
     text-shadow: 10px 10px 9.4px #00000052;
     width: 178px;
+    cursor: pointer;
 }
 
 .MAKE:hover .text-wrapper {
