@@ -18,7 +18,7 @@ function App() {
           <Route path="/shop" element={<Shop isLoggedIn={isLoggedIn} />} />
           <Route path="/make" element={<Make isLoggedIn={isLoggedIn} />} />
           <Route path="/" element={<Home isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
-          <Route path="/cart" element={<Cart />}/>
+          <Route path="/cart" element={<Cart isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>}/>
         </Routes>
       </div>
   );
