@@ -7,30 +7,30 @@ const Palette = ({ handleImageSelect }) => {
 
   const categories = {
     Fishbowl: [
-      { src: "/img2/Fishbowl.png", price: 20 },
-      { src: "/img2/Fishtank.png", price: 30 }
+      { src: "/item/Fishbowl.png", price: 20 },
+      { src: "/item/Fishtank.png", price: 30 }
 
     ],
     Fish: [
-      { src: "/img2/Goldfish.png", price: 10 },
-      { src: "/img2/Tetra.png", price: 5 },
-      { src: "/img2/Betta.png", price: 7 },
-      { src: "/img2/Angelfish.png", price: 28 },
-      { src: "/img2/Guppy.png", price: 10 }
+      { src: "/item/Goldfish.png", price: 10 },
+      { src: "/item/Tetra.png", price: 5 },
+      { src: "/item/Betta.png", price: 7 },
+      { src: "/item/Angelfish.png", price: 28 },
+      { src: "/item/Guppy.png", price: 10 }
    ],
     Plant: [
-      { src: "/img2/Water_sprite.png", price: 10 },
-      { src: "/img2/Vallisneria.png", price: 15 },
-      { src: "/img2/Blyxa_japonica.png", price: 12 }
+      { src: "/item/Water_sprite.png", price: 10 },
+      { src: "/item/Vallisneria.png", price: 15 },
+      { src: "/item/Blyxa_japonica.png", price: 12 }
     ],
         Stone: [
-      { src: "/img2/Volcanic_stone.png", price: 8 },
-      { src: "/img2/Blue_dragon_stone.png", price: 12 },
-      { src: "/img2/Egg_stone.png", price: 6 }
+      { src: "/item/Volcanic_stone.png", price: 8 },
+      { src: "/item/Blue_dragon_stone.png", price: 12 },
+      { src: "/item/Egg_stone.png", price: 6 }
     ],Floor: [
-      { src: "/img2/White_sand.png", price: 10 },
-      { src: "/img2/Black_sand.png", price: 15 },
-      { src: "/img2/Multicolored_sand.png", price: 9 }
+      { src: "/item/White_sand.png", price: 10 },
+      { src: "/item/Black_sand.png", price: 15 },
+      { src: "/item/Multicolored_sand.png", price: 9 }
     ]
     
   };
