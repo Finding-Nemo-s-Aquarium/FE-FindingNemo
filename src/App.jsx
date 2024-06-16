@@ -3,6 +3,7 @@ import SignIn from './SignIn/SignIn.jsx';
 import Home from './Home/Home.jsx';
 import Shop from './Shop/Shop.jsx';
 import Make from './Make/Make.jsx';
+import Cart from './Cart/Cart.jsx';
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/make" element={<Make />} />
+          <Route path="/cart" element={<Cart />}/>
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
