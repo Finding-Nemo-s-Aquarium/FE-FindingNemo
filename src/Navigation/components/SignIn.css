@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo:wght@400&display=swap');
+
+.SIGN-IN {
+    height: 56px;
+    position: relative;
+    width: 178px;
+
+}
+
+.SIGN-IN .text-wrapper {
+    text-shadow: var(--navigation-bar);
+    color: #2845A3;
+    font-size: 24px;
+    font-weight: 400;
+    height: 56px;
+    line-height: normal;
+    font-family: 'Baloo', Helvetica, sans-serif;
+    position: absolute;
+    text-align: center;
+    text-shadow: 30px 25px 9.4px #00000052;
+    width: 178px;
+}
+
+.SIGN-IN:hover .text-wrapper {
+    color: #ff9500;
+}

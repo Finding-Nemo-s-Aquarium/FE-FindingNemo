@@ -1,44 +1,60 @@
+import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
+import DonTHaveAn from './components/DonTHaveAn';
 import BackToHome from "./components/BackToHome";
-import DonTHaveAn from "./components/DonTHaveAn";
-import ForgotPassword from "./components/ForgotPassword";
 import SignInButton from "./components/SignInButton";
 import "./SignIn.css";
 
-const SignIn = () => {
+const SignIn = ({ setIsLoggedIn }) => {
+  const navigate = useNavigate();
+
+  const handleSignIn = () => {
+    setIsLoggedIn(true);
+    navigate('/home');
+  };
+
   return (
     <div className="screen">
       <div className="overlap-wrapper">
         <div className="overlap">
+
           <div className="signin-format">
+
             <div className="format-top">
-              <img className="clownfish" alt="Clownfish" src="clownfish.png" />
-              <div className="text-wrapper-5">FINDING NEMO</div>
-              <div className="text-wrapper-6">Sign in</div>
+              <img className="clownfish" alt="Clownfish" src="img/logo_clownfish.png" />
+              <div className="FINDINGNEMO-text">FINDING NEMO</div>
+              <div className="Signin-text">Sign in</div>
               <DonTHaveAn className="dont-have-an-account" property1="default" />
             </div>
-            <ForgotPassword className="forgot-password-instance" property1="default" />
+
+
             <div className="ID">
-              <div className="overlap-group">
-                <div className="text-wrapper-7">youremail@email.com</div>
-              </div>
-              <div className="text-wrapper-8">ID</div>
+              <div className="ID-text">ID</div>
+              <input className="input-box" type="email" id="emailInput" name="email" placeholder="example@example.com" required />
             </div>
+
             <div className="PASSWORD">
-              <div className="overlap-group">
-                <div className="text-wrapper-9">********</div>
-              </div>
-              <div className="text-wrapper-10">PASSWORD</div>
+              <div className="PASSWORD-text">PASSWORD</div>
+              <input className="input-box" type="password" id="passwordInput" name="password" placeholder="Enter your password" required />
             </div>
-            <SignInButton className="SIGNIN-instance" property1="default" />
+
+            <SignInButton className="SIGNIN-instance" setIsLoggedIn={setIsLoggedIn} />
+
           </div>
-          <img className="rectangle" alt="Rectangle" src="img/login_goldfish.jpg" />
+
+          <img className="rectangle" alt="Rectangle" src="img/sign_goldfish.jpg" />
           <div className="group">
             <BackToHome className="back-to-home-instance" property1="default" />
           </div>
         </div>
       </div>
+
     </div>
   );
+};
+
+SignIn.propTypes = {
+  setIsLoggedIn: PropTypes.func.isRequired,
 };
 
 export default SignIn;

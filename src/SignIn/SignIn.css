@@ -1,32 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 :root {
   --navigation-bar: 4px 9px 9.399999618530273px 0px rgba(0, 0, 0, 0.32);
+}
+
+/* 기본 여백 제거 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .screen {
   background-color: #ffffff;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  width: 100%;
-}
-
-.screen .overlap-wrapper {
-  background-color: #ffffff;
-  height: 1024px;
-  width: 1440px;
+  width: 0%;
+  height: 100vh;
 }
 
 .screen .overlap {
   background-size: 100% 100%;
-  height: 1024px;
   position: relative;
 }
 
 .screen .signin-format {
-  height: 635px;
   left: 137px;
   position: absolute;
-  top: 194px;
+  top: 120px;
   width: 448px;
 }
 
@@ -39,96 +42,59 @@
 }
 
 .screen .clownfish {
-  height: 50px;
+  height: 35px;
+  width: 35px;
   left: 0;
   object-fit: cover;
   position: absolute;
   top: 0;
-  width: 50px;
 }
 
-.screen .text-wrapper-5 {
+.screen .FINDINGNEMO-text {
   color: #2845a3;
-  font-family: "Bowlby One-Regular", Helvetica;
-  font-size: 28px;
+  font-family: 'Luckiest Guy', Helvetica, sans-serif;
+  font-size: 27px;
   font-weight: 400;
   height: 51px;
-  left: 50px;
+  left: 10px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 2px;
+  top: 3px;
   width: 255px;
+  font-weight: bold;
 }
 
-.screen .text-wrapper-6 {
+.screen .Signin-text {
   color: #000000;
   font-family: "Kanit-SemiBold", Helvetica;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 600;
   height: 82px;
-  left: 0;
+  left: -30px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 72px;
+  top: 55px;
   white-space: nowrap;
   width: 254px;
-}
-
-.screen .dont-have-an-account {
-  color: #999999;
-  left: 0 !important;
-  position: absolute !important;
-  top: 172px !important;
-}
-
-.screen .forgot-password-instance {
-  left: 224px !important;
-  position: absolute !important;
-  top: 483px !important;
 }
 
 .screen .ID {
   height: 111px;
   left: 0;
   position: absolute;
-  top: 243px;
+  top: 180px;
   width: 452px;
+  font-size: 15px;
 }
 
-.screen .overlap-group {
-  background-color: #ffffff;
-  border: 2px solid;
-  border-color: #56679e;
-  border-radius: 17px;
-  height: 74px;
-  left: 0;
-  position: absolute;
-  top: 37px;
-  width: 448px;
-}
-
-.screen .text-wrapper-7 {
-  color: #b6b6b6;
-  font-family: "Kanit-Regular", Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  height: 36px;
-  left: 22px;
-  letter-spacing: 1px;
-  line-height: normal;
-  position: absolute;
-  top: 16px;
-  width: 288px;
-}
-
-.screen .text-wrapper-8 {
+.screen .ID-text {
   color: #2845a3;
   font-family: "Kanit-Regular", Helvetica;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 400;
   height: 37px;
   left: 2px;
@@ -139,32 +105,31 @@
   width: 129px;
 }
 
-.screen .PASSWORD {
-  height: 111px;
+.screen .input-box {
+  height: 50px;
+  width: 380px;
+  background-color: #ffffff;
+  border: 2px solid;
+  border-color: #56679e;
+  border-radius: 17px;
   left: 0;
   position: absolute;
-  top: 372px;
-  width: 452px;
+  top: 25px;
 }
 
-.screen .text-wrapper-9 {
-  color: #b6b6b6;
-  font-family: "Kanit-Regular", Helvetica;
-  font-size: 23px;
-  font-weight: 400;
-  height: 36px;
-  left: 22px;
-  letter-spacing: 2.53px;
-  line-height: normal;
+
+.screen .PASSWORD {
+  height: 111px;
+  width: 380px;
+  left: 0;
   position: absolute;
-  top: 20px;
-  width: 176px;
+  top: 280px;
 }
 
-.screen .text-wrapper-10 {
+.screen .PASSWORD-text {
   color: #2845a3;
   font-family: "Kanit-Regular", Helvetica;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 400;
   height: 37px;
   left: 2px;
@@ -178,12 +143,12 @@
 .screen .SIGNIN-instance {
   left: 0 !important;
   position: absolute !important;
-  top: 561px !important;
+  top: 430px !important;
 }
 
 .screen .rectangle {
-  height: 1024px;
-  left: 720px;
+  height: 729px;
+  left: 800px;
   position: absolute;
   top: 0;
   width: 720px;

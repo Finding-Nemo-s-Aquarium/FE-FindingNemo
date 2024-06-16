@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';// eslint-disable-line no-unused-vars
-import Navigation from "../Before_Navigation/Navigation";
-import './Home.css';
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types'
+import BeforeNavigation from "../Navigation/BeforeNavigation"
+import AfterNavigation from "../Navigation/AfterNavigation"
+import './Home.css'
 
-const Home = () => {
+const Home = ({ isLoggedIn, setIsLoggedIn }) => {
     const [showInfo, setShowInfo] = useState(false);
 
     const handleScroll = () => {
@@ -24,25 +26,17 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="background">
-            <Navigation />
-            {showInfo && (
-                <div className="info-bar">
-                    <div className="info-links">
-                        <a href="#info">Info</a>
-                        <a href="#support">Support</a>
-                        <a href="#marketing">Marketing</a>
-                    </div>
-                    <div className="legal-links">
-                        <a href="#terms">Terms of 니모를 찾아서</a>
-                    </div>
-                    <div className="copyright">
-                        &copy; 2024 Finding Nemo
-                    </div>
-                </div>
-            )}
+        <div>
+            <div className="background">
+                {isLoggedIn ? <AfterNavigation /> : <BeforeNavigation />}
+            </div>
         </div>
     );
+};
+
+Home.propTypes = {
+    isLoggedIn: PropTypes.bool.isRequired,
+    setIsLoggedIn: PropTypes.func.isRequired,
 };
 
 export default Home;
