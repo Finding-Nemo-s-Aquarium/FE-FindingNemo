@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400&display=swap');
 
 .navigation {
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     display: flex;
