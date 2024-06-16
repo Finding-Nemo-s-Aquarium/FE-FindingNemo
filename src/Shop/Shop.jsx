@@ -39,12 +39,14 @@ const Shop = ({ isLoggedIn }) => {
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
-        setSelectedItem(null); // 선택된 아이템 초기화
+        setSelectedItem(null); // 카테고리를 클릭하면 선택된 아이템을 초기화
     };
 
     const handleItemClick = (item) => {
         setSelectedItem(item);
     };
+
+    const allItems = Object.values(categories).flat();
 
     return (
         <div className="Background">
@@ -57,6 +59,11 @@ const Shop = ({ isLoggedIn }) => {
             </div>
 
             <div className="category-bar">
+                <div className="category">
+                    <div className="category-title" onClick={() => handleCategoryClick(null)}>
+                        All
+                    </div>
+                </div>
                 {Object.keys(categories).map(category => (
                     <div className="category" key={category}>
                         <div className="category-title" onClick={() => handleCategoryClick(category)}>
@@ -84,11 +91,19 @@ const Shop = ({ isLoggedIn }) => {
                     <div className="gallery-item">
                         <img src={selectedItem.img} alt={selectedItem.name} />
                     </div>
-                ) : selectedCategory && categories[selectedCategory].map(item => (
-                    <div className="gallery-item" key={item.name}>
-                        <img src={item.img} alt={item.name} />
-                    </div>
-                ))}
+                ) : selectedCategory ? (
+                    categories[selectedCategory].map(item => (
+                        <div className="gallery-item" key={item.name}>
+                            <img src={item.img} alt={item.name} />
+                        </div>
+                    ))
+                ) : (
+                    allItems.map(item => (
+                        <div className="gallery-item" key={item.name}>
+                            <img src={item.img} alt={item.name} />
+                        </div>
+                    ))
+                )}
             </div>
         </div>
     );
