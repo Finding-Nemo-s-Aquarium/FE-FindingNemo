@@ -1,23 +1,26 @@
-.MAKE {
+@import url('https://fonts.googleapis.com/css2?family=NATS&display=swap');
+
+.SIGN-IN {
     height: 56px;
     position: relative;
     width: 178px;
+
 }
 
-.MAKE .text-wrapper {
+.SIGN-IN .text-wrapper {
     text-shadow: var(--navigation-bar);
     color: #ffffff;
-    font-family: "NATS-Regular", Helvetica;
     font-size: 18px;
     font-weight: 400;
     height: 56px;
     line-height: normal;
+    font-family: 'NATS', Helvetica, sans-serif;
     position: absolute;
     text-align: center;
-    text-shadow: 4px 9px 9.4px #00000052;
+    text-shadow: 30px 25px 9.4px #00000052;
     width: 178px;
 }
 
-.MAKE:hover .text-wrapper {
+.SIGN-IN:hover .text-wrapper {
     color: #ff9500;
 }

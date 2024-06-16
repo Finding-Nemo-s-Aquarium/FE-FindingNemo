@@ -1,0 +1,54 @@
+.AfterNavigation .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin-top: 50px; /* 네비게이션 바의 상단 여백 */
+}
+
+.AfterNavigation .finding-nemo {
+  display: flex;
+  align-items: center;
+}
+
+.AfterNavigation .finding-nemo .clownfish {
+  margin-top: -35px;
+  margin-left: 150px; /* Finding Nemo와 clownfish의 왼쪽 간격 */
+  height: 40px;
+  object-fit: cover;
+}
+
+.AfterNavigation .finding-nemo .finding-nemo-text {
+  margin-top: 0px;
+  margin-left: -40px; /* clownfish와 Finding Nemo 사이의 간격 */
+  white-space: nowrap; /* 텍스트를 한 줄로 유지 */
+}
+
+.AfterNavigation .menu {
+  margin-left: 200px; /* Finding Nemo와 Shop 사이의 간격 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px; /* Shop과 Make 사이의 간격 */
+}
+
+.AfterNavigation .image {
+  display: flex;
+  gap: 0px; /* Shop과 Make 사이의 간격 */
+}
+
+.AfterNavigation .Magnifier {
+  margin-top: -15px;
+  margin-left: 260px; /* menu와 Magnifier 사이의 간격 */
+  height: 70px; /* Magnifier의 크기 */
+}
+
+.AfterNavigation .Cart {
+  margin-top: -15px;
+  height: 80px; /* Cart의 크기 */
+}
+
+.AfterNavigation .Profile {
+  margin-top: -15px;
+  height: 80px; /* Profile의 크기 */
+}

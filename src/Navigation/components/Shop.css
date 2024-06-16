@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=NATS&display=swap');
+
 .SHOP {
     height: 56px;
     position: relative;
@@ -7,14 +9,14 @@
 .SHOP .text-wrapper {
     text-shadow: var(--navigation-bar);
     color: #ffffff;
-    font-family: "NATS-Regular", Helvetica;
+    font-family: 'NATS', Helvetica, sans-serif;
     font-size: 18px;
     font-weight: 400;
     height: 56px;
     line-height: normal;
     position: absolute;
     text-align: center;
-    text-shadow: 4px 9px 9.4px #00000052;
+    text-shadow: 10px 10px 9.4px #00000052;
     width: 178px;
 }
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 .finding-nemo {
     height: 64px;
     position: relative;
@@ -7,17 +9,14 @@
 .finding-nemo .text-wrapper {
     text-shadow: var(--navigation-bar);
     color: #ffffff;
-    font-family: "Luckiest Guy-Regular", Helvetica;
-    font-size: 32px;
+    font-family: 'Luckiest Guy', Helvetica, sans-serif;
+    font-size: 22px;
     font-weight: 400;
     height: 64px;
-    left: 0;
-    letter-spacing: 0;
     line-height: normal;
     position: absolute;
     text-align: center;
     text-shadow: 4px 9px 9.4px #00000052;
-    top: -1px;
     width: 262px;
 }
 

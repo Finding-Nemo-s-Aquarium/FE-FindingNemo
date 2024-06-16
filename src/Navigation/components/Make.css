@@ -1,26 +1,23 @@
-.SHOP {
+.MAKE {
     height: 56px;
     position: relative;
     width: 178px;
 }
 
-.SHOP .text-wrapper {
+.MAKE .text-wrapper {
     text-shadow: var(--navigation-bar);
     color: #ffffff;
     font-family: "NATS-Regular", Helvetica;
-    font-size: 32px;
+    font-size: 18px;
     font-weight: 400;
     height: 56px;
-    left: 0;
-    letter-spacing: 0;
     line-height: normal;
     position: absolute;
     text-align: center;
-    text-shadow: 4px 9px 9.4px #00000052;
-    top: -1px;
+    text-shadow: 10px 10px 9.4px #00000052;
     width: 178px;
 }
 
-.SHOP:hover .text-wrapper {
+.MAKE:hover .text-wrapper {
     color: #ff9500;
 }

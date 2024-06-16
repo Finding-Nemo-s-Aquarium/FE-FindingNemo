@@ -10,7 +10,7 @@ const Shop = ({ className }) => {
     }
   return (
     <div className="SHOP">
-      <div className={`text-wrapper ${className}`} onClick={handleClick}>Shop</div>;
+      <div className={`text-wrapper ${className}`} onClick={handleClick}>Shop</div>
     </div>
   );
 };

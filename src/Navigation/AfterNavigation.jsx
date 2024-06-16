@@ -2,22 +2,20 @@ import { useNavigate } from 'react-router-dom';
 import FindingNemo from "./components/FindingNemo";
 import Make from "./components/Make";
 import Shop from "./components/Shop";
-import SignIn from "./components/SignIn";
-import "./BeforeNavigation.css";
+import "./AfterNavigation.css";
 
-const Navigation = () => {
-  const navigate = useNavigate();
+const AfterNavigation = () => {
+  const navigation = useNavigate();
 
   const handleFindingNemoClick = () => {
-    navigate('/home');
+    navigation('/home');
   };
 
   return (
-    <div className="navigation">
+    <div className="AfterNavigation">
       <div className="text">
-        
-        <div className="finding-nemo" onClick={handleFindingNemoClick}>
 
+        <div className="finding-nemo" onClick={handleFindingNemoClick}>
           <img className="clownfish" alt="Clownfish" src="img/clownfish.png" />
           <FindingNemo className="finding-nemo-text" />
         </div>
@@ -27,11 +25,10 @@ const Navigation = () => {
           <Make className="MAKE-instance" />
         </div>
 
-        <img className="Magnifier" alt="Magnifier" src="img/magnifier.png" />
-
-        <div className="SIGN-IN">
-          <div className="rectangle" />
-          <SignIn className="SIGN-IN-instance" />
+        <div className="image">
+          <img className="Magnifier" alt="Magnifier" src="img/magnifier.png" />
+          <img className="Cart" alt="Cart" src="img/cart.png" />
+          <img className="Profile" alt="Profile" src="img/profile.png" />
         </div>
 
       </div>
@@ -39,4 +36,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default AfterNavigation;
