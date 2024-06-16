@@ -6,29 +6,33 @@ const Palette = ({ handleImageSelect }) => {
   const [selectedCategory, setSelectedCategory] = useState('Fish');
 
   const categories = {
-    Fish: [
-      { src: "/img2/goldfish.png", price: 10 },
-      { src: "/img2/tetra.png", price: 15 },
-      { src: "/img2/beta.png", price: 20 }
-    ],
-    Floor: [
-      { src: "/img2/whitefloor.png", price: 5 },
-      { src: "/img2/blackfloor.png", price: 7 },
-      { src: "/img2/fivecolorfloor.png", price: 10 }
-    ],
-    Stone: [
-      { src: "/img2/volcanostone.png", price: 8 },
-      { src: "/img2/bluedragonstone.png", price: 12 },
-      { src: "/img2/eggstone.png", price: 6 }
-    ],
-    Plant: [
-      { src: "/img2/america.png", price: 10 },
-      { src: "/img2/balis.png", price: 15 },
-      { src: "/img2/brisha.png", price: 12 }
-    ],
     Fishbowl: [
-      { src: "/img2/fishbowl1.png", price: 25 }
+      { src: "/img2/Fishbowl.png", price: 20 },
+      { src: "/img2/Fishtank.png", price: 30 }
+
+    ],
+    Fish: [
+      { src: "/img2/Goldfish.png", price: 10 },
+      { src: "/img2/Tetra.png", price: 5 },
+      { src: "/img2/Betta.png", price: 7 },
+      { src: "/img2/Angelfish.png", price: 28 },
+      { src: "/img2/Guppy.png", price: 10 }
+   ],
+    Plant: [
+      { src: "/img2/Water_sprite.png", price: 10 },
+      { src: "/img2/Vallisneria.png", price: 15 },
+      { src: "/img2/Blyxa_japonica.png", price: 12 }
+    ],
+        Stone: [
+      { src: "/img2/Volcanic_stone.png", price: 8 },
+      { src: "/img2/Blue_dragon_stone.png", price: 12 },
+      { src: "/img2/Egg_stone.png", price: 6 }
+    ],Floor: [
+      { src: "/img2/White_sand.png", price: 10 },
+      { src: "/img2/Black_sand.png", price: 15 },
+      { src: "/img2/Multicolored_sand.png", price: 9 }
     ]
+    
   };
 
   const handleCategorySelect = (category) => {

@@ -71,7 +71,10 @@ function Make() {
     <div className='Make'>
     <div className='Making' >
     <div className="Edit">
-      <div className="head"></div>
+      <div className="head">
+
+      </div>
+      <h3 id='make_comment'>MAKING YOUR AQUARIUM</h3>
       <div className="body">
         <Canvas
           images={images}

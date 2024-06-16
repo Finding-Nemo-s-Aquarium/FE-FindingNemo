@@ -32,16 +32,17 @@ p{
   padding-top: 20px; /* Align better vertically */
   border-radius: 70px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  text-align: center;
 }
 
 #comment{
-  font-size: 40px;
+  font-size: 35px;
+  text-align: center;
+
 }
 #result {
-  
   font-size:60px; /* Increase font size */
   font-weight: bold; /* Make text bold */
+  text-align: center;
 }
 #purchase{
   border: none;
