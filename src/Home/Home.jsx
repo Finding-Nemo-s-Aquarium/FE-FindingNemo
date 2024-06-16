@@ -1,5 +1,5 @@
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types'
-import { useState, useEffect } from 'react'
 import BeforeNavigation from "../Navigation/BeforeNavigation"
 import AfterNavigation from "../Navigation/AfterNavigation"
 import './Home.css'

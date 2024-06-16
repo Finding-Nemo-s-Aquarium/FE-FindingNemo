@@ -4,6 +4,7 @@ import SignIn from './SignIn/SignIn.jsx';
 import Home from './Home/Home.jsx';
 import Shop from './Shop/Shop.jsx';
 import Make from './Make/Make.jsx';
+import Cart from './Cart/Cart.jsx';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/shop" element={<Shop isLoggedIn={isLoggedIn} />} />
           <Route path="/make" element={<Make />} />
           <Route path="/" element={<Home isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path="/cart" element={<Cart />}/>
         </Routes>
       </div>
   );
