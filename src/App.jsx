@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import SignIn from './SignIn/SignIn.jsx';
+import SignUp from './SignUp/SignUp.jsx'
 import Home from './Home/Home.jsx';
 import Shop from './Shop/Shop.jsx';
 import Make from './Make/Make.jsx';
@@ -15,10 +16,11 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/signin" element={<SignIn setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/shop" element={<Shop isLoggedIn={isLoggedIn} />} />
           <Route path="/make" element={<Make />} />
           <Route path="/" element={<Home isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
-          <Route path="/cart" element={<Cart />}/>
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>
   );
