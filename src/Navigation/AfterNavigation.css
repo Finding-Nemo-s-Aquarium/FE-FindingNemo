@@ -25,6 +25,7 @@
 }
 
 .AfterNavigation .menu {
+  margin-top: -10px;
   margin-left: 200px; /* Finding Nemo와 Shop 사이의 간격 */
   display: flex;
   align-items: center;
