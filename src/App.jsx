@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-import SignIn from './SignIn/SignIn.jsx';
-import SignUp from './SignUp/SignUp.jsx'
+import SignIn from './Sign/SignIn.jsx';
+import SignUp from './Sign/SignUp.jsx'
 import Home from './Home/Home.jsx';
 import Shop from './Shop/Shop.jsx';
 import Make from './Make/Make.jsx';
