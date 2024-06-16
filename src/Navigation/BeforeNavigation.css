@@ -25,6 +25,7 @@
 }
 
 .BeforeNavigation .menu {
+  margin-top: -10px;
   margin-left: 200px; /* Finding Nemo와 Shop 사이의 간격 */
   display: flex;
   align-items: center;
@@ -49,7 +50,7 @@
 }
 
 .BeforeNavigation .SIGN-IN .SIGN-IN-instance {
-  color: #2845A3;
-  margin-left: -40px;
+  margin-top: -8px;
+  margin-left: -38px;
   z-index: 1;
 }
