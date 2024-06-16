@@ -38,8 +38,6 @@ function Make() {
     e.preventDefault();
     const menuItems = [
       { label: '삭제', action: () => handleImageDelete(id, images[index].price) },
-      { label: '앞으로 보내기', action: () => handleImageToFront(index) },
-      { label: '뒤로 보내기', action: () => handleImageToBack(index) }
     ];
     showContextMenu(e, menuItems);
   };
@@ -69,11 +67,12 @@ function Make() {
   };
 
   return (
+
     <div className='Make'>
-    <div className="Making">
-      <h1>FINDING NEMP AQUARIUM</h1>
+    <div className='Making' >
+    <div className="Edit">
       <div className="head"></div>
-      <div className="body" style={{ border: "solid black 2px" }}>
+      <div className="body">
         <Canvas
           images={images}
           handleImageDelete={handleImageDelete}
@@ -89,6 +88,7 @@ function Make() {
     <div className="footer">
         <Bill images={images} totalPrice={totalPrice} />
       </div>
+    </div>
     </div>
   );
 }

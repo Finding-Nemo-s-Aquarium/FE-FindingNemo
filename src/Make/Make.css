@@ -1,12 +1,14 @@
-
-/* App.css */
 .Make{
-  margin-bottom: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
-
+  background-image:url("../../public/img/main_nemo.png");
+  background-size: cover;
+  
 }
-.Making {
+.Making{
+  margin-bottom: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.Edit {
   display: flex;
   flex-direction: column;
   height: 80vh;
@@ -14,38 +16,45 @@
 }
 
 .head {
-  flex: 0 1 50px; /* 헤더 높이 */
-  background-color: #f0f0f0;
+  flex: 0 1 150px; /* 헤더 높이 */
+  background-color: none;
 }
 
 .body {
+  background-color: white;
   display: flex;
   flex: 1;
   overflow: hidden; /* body 전체가 스크롤되지 않도록 숨김 */
-  border: 2px solid black;
-  padding: 10px;
+  border: 2px solid gray;
+  padding: 30px;
   position: relative;
+  margin-bottom: 30px;
+  border-radius: 50px;
+  box-shadow: inset 0 0 10px;
 
 }
 
 .canvas {
   flex-direction: row;
-  border: 2px solid black;
+  border: 2px solid none;
+  border-radius: 50px;
   flex: 2;
-  margin-bottom: 10px;
   height: 100%;
-  margin-right: 5%;
+  margin-right: 30px;
 }
 
 .palette {
   flex-direction: row;
   flex: 1;
-  overflow: auto; /* 스크롤 가능하게 설정 */
+
 }
 
 .footer {
+  box-shadow: inset 0 0 10px;
 
-  border: 2px solid black;
+  border: 2px solid gray;
   background-color: #f0f0f0;
   padding: 10px;
+  border-radius: 50px;
+
 }

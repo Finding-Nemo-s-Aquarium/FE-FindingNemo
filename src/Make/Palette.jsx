@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Palette.css';
 
 const Palette = ({ handleImageSelect }) => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('Fish');
 
   const categories = {
     Fish: [

@@ -4,7 +4,8 @@
 }
 
 .category-button {
-  width: 30%;
+  margin-top: 15px;
+  width: 25%; 
 }
 
 .palette-button {
@@ -13,11 +14,23 @@
   height: 18%;
   padding: 10px;
   margin-bottom: 10%;
-  font-size: 16px;
+  font-size: 20px;
   background-color: #f0f0f0;
   border: 1px solid #ccc;
+  border-radius: 120px;
   cursor: pointer;
-
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.palette-button:hover{
+  background-color: #2845A3;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+  
+.palette-button.selected{
+  background-color: #2845A3;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 .palette-button.selected {
@@ -25,21 +38,46 @@
 }
 
 .image-list {
-  width: 70%;
-  border: 2px solid black;
+  width: 75%;
+  border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
-  overflow: scroll;
+  overflow: auto;
+overflow-x: hidden;  
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
 }
 
 .image-item {
   margin: 10px;
   cursor: pointer;
-  max-width: 100%;
-  object-fit: cover;
+  max-width: 95%;
+  object-fit: contain;
 }
 
 .image-item:hover {
 opacity: 70%;}
+
+
+
+
+
+
+/* 수직 스크롤 바에만 적용 */
+::-webkit-scrollbar {
+  width: 20px; /* 스크롤 바 너비 */
+  
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* 스크롤 바 트랙 색상 */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* 스크롤 바 색상 */
+  border-radius: 10px; /* 스크롤 바 모서리 반경 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* 마우스 호버 시 스크롤 바 색상 */
+}

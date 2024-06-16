@@ -7,17 +7,21 @@ const Bill = ({ images, totalPrice }) => {
 
   return (
     <div className="bill">
-      <p id="result">Total Price: {amount} $</p>
-      <div className="image-list">
-        <h2>Selected Images</h2>
-        <div className="image-container">
+      <div className="bill-image-list">
+        <h1>Selected Merchandise</h1>
+        <div className="bill-image-container">
           {images.map(image => (
-            <div key={image.id} className="image-item">
+            <div key={image.id} className="bill-image-item">
               <img src={image.src} alt="Selected Image" className="selected-image" />
               <span>{image.price} $</span>
             </div>
           ))}
         </div>
+      </div>
+      <div className='total'>
+      <p id="comment">Total Price:</p>
+      <p id="result">{amount} $</p>
+      <button id="purchase">Purchase</button>
       </div>
     </div>
   );
