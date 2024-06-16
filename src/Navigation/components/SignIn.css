@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=NATS&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo:wght@400&display=swap');
 
 .SIGN-IN {
     height: 56px;
@@ -9,12 +9,12 @@
 
 .SIGN-IN .text-wrapper {
     text-shadow: var(--navigation-bar);
-    color: #ffffff;
-    font-size: 18px;
+    color: #2845A3;
+    font-size: 24px;
     font-weight: 400;
     height: 56px;
     line-height: normal;
-    font-family: 'NATS', Helvetica, sans-serif;
+    font-family: 'Baloo', Helvetica, sans-serif;
     position: absolute;
     text-align: center;
     text-shadow: 30px 25px 9.4px #00000052;

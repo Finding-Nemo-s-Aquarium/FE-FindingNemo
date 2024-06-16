@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400&display=swap');
+
 .MAKE {
     height: 56px;
     position: relative;
@@ -7,8 +9,8 @@
 .MAKE .text-wrapper {
     text-shadow: var(--navigation-bar);
     color: #ffffff;
-    font-family: "NATS-Regular", Helvetica;
-    font-size: 18px;
+    font-family: 'Baloo 2', Helvetica, sans-serif;
+    font-size: 20px;
     font-weight: 400;
     height: 56px;
     line-height: normal;
