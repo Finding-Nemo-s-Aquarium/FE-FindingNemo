@@ -1,5 +1,7 @@
 p {
   margin: 10px;
+  font-family: 'Baloo 2', Helvetica, sans-serif;
+
 }
 
 .bill {
@@ -72,6 +74,8 @@ p {
   margin-bottom: 5%;
   border-radius: 40px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  font-family: 'Baloo 2', Helvetica, sans-serif;
+
 }
 
 #purchase:hover {

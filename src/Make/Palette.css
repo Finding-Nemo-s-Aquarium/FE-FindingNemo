@@ -6,6 +6,8 @@
 .category-button {
   margin-top: 15px;
   width: 25%; 
+  font-family: 'Baloo 2', Helvetica, sans-serif;
+
 }
 
 .palette-button {
@@ -15,11 +17,12 @@
   padding: 10px;
   margin-bottom: 10%;
   font-size: 20px;
-  font-family: "NATS-Regular", Helvetica;
+  font-weight: bold;
   background-color: #d0d0d0;
   border: 1px solid #d0d0d0;
   border-top-left-radius: 120px;
   border-bottom-left-radius: 120px;
+    font-family: 'Baloo 2', Helvetica, sans-serif;
 
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);

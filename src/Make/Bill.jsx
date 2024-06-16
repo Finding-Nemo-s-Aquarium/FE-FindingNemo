@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import './Bill.css';
@@ -17,8 +18,20 @@ const Bill = ({ images, totalPrice }) => {
     return acc;
   }, []);
 
+  // JSON 파일 생성
+  const generateJsonFile = () => {
+    const jsonOutput = groupedImages.map(image => ({
+      name: image.src.split('/').pop().replace(/\.[^/.]+$/, ''),
+      amount: image.quantity
+    }));
+  
+    console.log(jsonOutput); // Log the JSON array to console
+    return jsonOutput;
+  };
+
   const handlePurchase = () => {
     // Purchase 버튼 클릭 시 '/cart' 경로로 이동
+    generateJsonFile(); // JSON 파일 생성//반환값이jsonoutput
     navigate('/cart');
   };
 
@@ -30,7 +43,7 @@ const Bill = ({ images, totalPrice }) => {
           {groupedImages.map(image => (
             <div key={image.src} className="bill-image-item">
               <img src={image.src} alt="Selected Image" className="selected-image" />
-              <span>{image.nameE}</span>
+              <span>{image.name}</span>
               <span>{image.price}$ x {image.quantity}</span>
               <span> = {image.totalPrice}$</span>
             </div>
@@ -38,11 +51,10 @@ const Bill = ({ images, totalPrice }) => {
         </div>
       </div>
       <div className='bill-info'>
-      <div className='total'>
-        <p id="comment">Total Price:</p>
-        <p id="result">{totalPrice}$</p>
+        <div className='total'>
+          <p id="comment">Total Price:</p>
+          <p id="result">{totalPrice}$</p>
         </div>
-
         <button id="Purchase" onClick={handlePurchase}>Purchase</button>
       </div>
     </div>
