@@ -17,7 +17,7 @@ const Palette = ({ handleImageSelect }) => {
       { src: "/item/Betta.png", price: 7 },
       { src: "/item/Angelfish.png", price: 28 },
       { src: "/item/Guppy.png", price: 10 }
-   ],
+    ],
     Plant: [
       { src: "/item/Water_sprite.png", price: 10 },
       { src: "/item/Vallisneria.png", price: 15 },
@@ -28,9 +28,9 @@ const Palette = ({ handleImageSelect }) => {
       { src: "/item/Blue_dragon_stone.png", price: 12 },
       { src: "/item/Egg_stone.png", price: 6 }
     ],Floor: [
-      { src: "/item/White_sand.png", price: 10 },
-      { src: "/item/Black_sand.png", price: 15 },
-      { src: "/item/Multicolored_sand.png", price: 9 }
+      { src: "/item/White_pebble.png", price: 10 },
+      { src: "/item/Black_pebble.png", price: 15 },
+      { src: "/item/Multicolored_pebble.png", price: 9 }
     ]
     
   };

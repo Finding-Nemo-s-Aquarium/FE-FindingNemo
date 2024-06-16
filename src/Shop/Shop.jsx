@@ -9,30 +9,30 @@ const Shop = ({ isLoggedIn }) => {
 
     const categories = {
         Aquarium: [
-            { name: "Fish tank", img: "img2/fishbowl1.png" }, // fish_tank
-            // { name: "Fish bowl", img: "img2/fish_bowl.png" } // fish_bowl
+            { name: "Fish tank", img: "item/Fishtank.png" },
+            { name: "Fish bowl", img: "item/Fishbowl.png" }
         ],
         Fish: [
-            // { name: "Guppy", img: "img2/guppy.png" }, // guppy
-            { name: "Goldfish", img: "img2/goldfish.png" }, // goldfish
-            { name: "Betta", img: "img2/beta.png" }, // betta
-            { name: "Angelfish", img: "img2/angelfish.png" }, // angelfish
-            { name: "Tetra", img: "img2/tetra.png" } // tetra
+            { name: "Guppy", img: "item/Guppy.png" },
+            { name: "Goldfish", img: "item/Goldfish.png" },
+            { name: "Betta", img: "item/Betta.png" },
+            { name: "Angelfish", img: "item/Angelfish.png" },
+            { name: "Tetra", img: "item/Tetra.png" }
         ],
         Plant: [
-            // { name: "Blyxa japonica", img: "img2/blyxa_japonica.png" }, // blyxa_japonica
-            { name: "American water sprite", img: "img2/america.png" }, // american_water_sprite
-            { name: "Vallisneria", img: "img2/balis.png" } // vallisneria
+            { name: "Blyxa japonica", img: "item/Blyxa_japonica.png" },
+            { name: "Water sprite", img: "item/Water_sprite.png" },
+            { name: "Vallisneria", img: "item/Vallisneria.png" }
         ],
         Stone: [
-            { name: "Egg stone", img: "img2/eggstone.png" }, // egg_stone
-            { name: "Blue dragon stone", img: "img2/bluedragonstone.png" }, // blue_dragon_stone
-            { name: "Volcanic stone", img: "img2/volcanostone.png" } // volcanic_stone
+            { name: "Egg stone", img: "item/Egg_stone.png" },
+            { name: "Blue dragon stone", img: "item/Blue_dragon_stone.png" },
+            { name: "Volcanic stone", img: "item/Volcanic_stone.png" }
         ],
         Flooring: [
-            { name: "Black sand", img: "img2/blackfloor.png" }, // black_sand
-            { name: "White sand", img: "img2/whitefloor.png" }, // white_sand
-            { name: "Multicolored sand", img: "img2/fivecolorfloor.png" } // multicolored_sand
+            { name: "Black pebble", img: "item/black_pebble.png" },
+            { name: "White pebble", img: "item/white_pebble.png" },
+            { name: "Multicolored_pebble", img: "item/Multicolored_pebble.png" }
         ]
     };
 
