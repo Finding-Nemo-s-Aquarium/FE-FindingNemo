@@ -7,30 +7,31 @@ const Palette = ({ handleImageSelect }) => {
 
   const categories = {
     Fishbowl: [
-      { src: "/img2/Fishbowl.png", price: 20 },
-      { src: "/img2/Fishtank.png", price: 30 }
+      { name:"둥근어항", src: "/img2/Fishbowl.png", price: 20 },
+      { name:"사각어항", src: "/img2/Fishtank.png", price: 30 }
 
     ],
     Fish: [
-      { src: "/img2/Goldfish.png", price: 10 },
-      { src: "/img2/Tetra.png", price: 5 },
-      { src: "/img2/Betta.png", price: 7 },
-      { src: "/img2/Angelfish.png", price: 28 },
-      { src: "/img2/Guppy.png", price: 10 }
+      { name:"구피",src: "/img2/Guppy.png", price: 10 },
+      { name:"금붕어",src: "/img2/Goldfish.png", price: 10 },
+      { name:"베타",src: "/img2/Betta.png", price: 7 },
+      { name:"앤젤피쉬",src: "/img2/Angelfish.png", price: 28 },
+      { name:"테트라",src: "/img2/Tetra.png", price: 5 }
    ],
     Plant: [
-      { src: "/img2/Water_sprite.png", price: 10 },
-      { src: "/img2/Vallisneria.png", price: 15 },
-      { src: "/img2/Blyxa_japonica.png", price: 12 }
+      { name:"브릭샤 자포니카", src: "/img2/Blyxa_japonica.png", price: 12 },
+      { name:"아메리카 워터스프라이트", src: "/img2/Water_sprite.png", price: 10 },
+      { name:"발리스네리아", src: "/img2/Vallisneria.png", price: 15 }
     ],
         Stone: [
-      { src: "/img2/Volcanic_stone.png", price: 8 },
-      { src: "/img2/Blue_dragon_stone.png", price: 12 },
-      { src: "/img2/Egg_stone.png", price: 6 }
-    ],Floor: [
-      { src: "/img2/White_sand.png", price: 10 },
-      { src: "/img2/Black_sand.png", price: 15 },
-      { src: "/img2/Multicolored_sand.png", price: 9 }
+      { name:"에그스톤(1kg)", src: "/img2/Egg_stone.png", price: 6 },
+      { name:"청룡석(1kg)",src: "/img2/Blue_dragon_stone.png", price: 12 },
+      { name:"화산석(1kg)",src: "/img2/Volcanic_stone.png", price: 8 }
+    ],
+    Floor: [
+      { name:"흑사", src: "/img2/Black_sand.png", price: 15 },
+      { name:"백사", src: "/img2/White_sand.png", price: 10 },
+      { name:"오색사",src: "/img2/Multicolored_sand.png", price: 9 }
     ]
     
   };
