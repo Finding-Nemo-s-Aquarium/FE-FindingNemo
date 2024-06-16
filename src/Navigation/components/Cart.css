@@ -1,8 +1,13 @@
 .CART {
-    height: 80px;
-    width: 80px;
+    position: relative;
+    margin-top: -25px;
+    height: 35px;
+    width: 35px;
     background-image: url('img/white_cart.png');
-    background-size: cover;
+    background-size: contain;
+    /* cover에서 contain으로 변경하여 이미지가 컨테이너에 맞게 조정되도록 함 */
+    background-repeat: no-repeat;
+    /* 이미지가 반복되지 않도록 설정 */
     cursor: pointer;
     /* 클릭 가능한 커서 모양 */
 }
