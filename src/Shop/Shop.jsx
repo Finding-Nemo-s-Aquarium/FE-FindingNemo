@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import BeforeNavigation from "../Navigation/BeforeNavigation";
 import AfterNavigation from '../Navigation/AfterNavigation';
 import ShopDetail from './components/ShopDetail';
@@ -8,7 +8,6 @@ import "./Shop.css";
 const Shop = ({ isLoggedIn }) => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [selectedItem, setSelectedItem] = useState(null);
-    const [cart, setCart] = useState([]);
 
     const categories = {
         Aquarium: [
@@ -49,28 +48,17 @@ const Shop = ({ isLoggedIn }) => {
     };
 
     const handleAddToCart = (name, amount) => {
-        setCart(prevCart => [...prevCart, { name, amount }]);
+        if (!isLoggedIn) {
+            alert('로그인을 해주세요.');
+            return;
+        }
+        // Add To Cart 버튼을 클릭하면, 상품 이름과 수량을 출력
+        console.log({ name, amount });
     };
 
     const handleCloseDetail = () => {
         setSelectedItem(null);
     };
-
-    useEffect(() => {
-        // Add To Cart 버튼을 클릭하면 백엔드로 데이터 전송
-        if (cart.length > 0) {
-            fetch('http://localhost:8080/cart', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(cart),
-            })
-            .then(response => response.json())
-            .then(data => console.log('Cart updated:', data))
-            .catch(error => console.error('Error updating cart:', error));
-        }
-    }, [cart]);
 
     const allItems = Object.values(categories).flat();
 
