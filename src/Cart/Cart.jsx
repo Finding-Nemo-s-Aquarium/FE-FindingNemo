@@ -30,11 +30,9 @@ function Cart({ isLoggedIn }) {
         {dummyData.map(item => (
           <div key={item.id} className='cart-item'>
             <img className='cart-item-img' src={item.src} alt="사진" />
-            <div className='cart-item-info'>
               <span className='cart-item-name'>{item.name}</span>
               <span className='cart-item-price'>{item.price.toLocaleString()}원</span>
               <span className='cart-item-amount'>수량: {item.amount}</span>
-            </div>
           </div>
         ))}
         <div className="total">
