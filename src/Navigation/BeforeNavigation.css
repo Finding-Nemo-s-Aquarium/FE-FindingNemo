@@ -1,56 +1,108 @@
+.BeforeNavigation {
+  width: 100%;
+}
+
 .BeforeNavigation .text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 75%;
-  margin-top: 50px; /* 네비게이션 바의 상단 여백 */
+  width: 90%;
+  margin: 50px auto 0 auto;
+  /* 네비게이션 바의 상단 여백과 중앙 정렬 */
+  max-width: 1300px;
+  /* 최대 너비를 설정하여 큰 화면에서도 중앙에 위치 */
 }
 
 .BeforeNavigation .finding-nemo {
   display: flex;
   align-items: center;
+  cursor: pointer;
+  /* 클릭 가능한 요소임을 나타내기 위해 커서 변경 */
 }
 
 .BeforeNavigation .finding-nemo .clownfish {
-  margin-top: -35px;
-  margin-left: 150px; /* Finding Nemo와 clownfish의 왼쪽 간격 */
+  margin-top: -15px;
   height: 40px;
   object-fit: cover;
 }
 
 .BeforeNavigation .finding-nemo .finding-nemo-text {
-  margin-top: 0px;
-  margin-left: -40px; /* clownfish와 Finding Nemo 사이의 간격 */
-  white-space: nowrap; /* 텍스트를 한 줄로 유지 */
+  margin-top: 15px;
+  margin-left: -40px;
+  /* clownfish와 Finding Nemo 사이의 간격 */
+  white-space: nowrap;
+  /* 텍스트를 한 줄로 유지 */
 }
 
 .BeforeNavigation .menu {
-  margin-top: -10px;
-  margin-left: 200px; /* Finding Nemo와 Shop 사이의 간격 */
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0px; /* Shop과 Make 사이의 간격 */
+  flex-grow: 1;
+  /* Finding Nemo와 Shop 사이의 간격 */
+  gap: 20px;
+  /* Shop과 Make 사이의 간격 */
 }
 
-.BeforeNavigation .Magnifier {
-  margin-top: -40px;
-  height: 70px; /* Magnifier의 크기 */
-  margin-left: 320px; /* menu와 Magnifier 사이의 간격 */
+.BeforeNavigation .MAGNIFIER-instance {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
+  /* MAGNIFIER를 오른쪽 끝으로 정렬 */
 }
 
-.BeforeNavigation .SIGN-IN .rectangle {
-  margin-top: -10px;
-  margin-left: -10px; /*Magnifier와 SIGN IN rectangle 사이의 간격*/
+.BeforeNavigation .SIGN-IN {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.BeforeNavigation .SIGN-IN .SIGN-IN-rectangle {
   background-color: #ffffff;
   border-radius: 50px;
   height: 40px;
-  width: 120px;
-  position: absolute; /* 사각형을 텍스트와 함께 위치 */
+  width: 800px;
+  margin-top: -25px;
+  margin-left: 50px;
+  z-index: 0;
+  position: relative;
 }
 
 .BeforeNavigation .SIGN-IN .SIGN-IN-instance {
-  margin-top: -8px;
-  margin-left: -38px;
+  top: 50%;
+  left: 50%;
+  margin-top: -30px;
+  margin-left: -153px;
   z-index: 1;
+}
+
+/* 화면 크기에 따라 적절하게 간격을 조절하기 위해 media queries 추가 */
+@media (max-width: 768px) {
+  .BeforeNavigation .text {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .BeforeNavigation .finding-nemo,
+  .BeforeNavigation .menu {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .BeforeNavigation .SIGN-IN {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .BeforeNavigation .SIGN-IN .SIGN-IN-rectangle {
+    width: 100%;
+    max-width: 200px;
+    /* 작은 화면에서도 적절한 너비를 유지 */
+  }
+
+  .BeforeNavigation .SIGN-IN .SIGN-IN-instance {
+    font-size: 14px;
+    /* 작은 화면에서 텍스트 크기 조정 */
+  }
 }

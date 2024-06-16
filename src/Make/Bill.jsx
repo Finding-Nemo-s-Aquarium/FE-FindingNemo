@@ -29,10 +29,26 @@ const Bill = ({ images, totalPrice }) => {
     return jsonOutput;
   };
 
-  const handlePurchase = () => {
-    // Purchase 버튼 클릭 시 '/cart' 경로로 이동
-    generateJsonFile(); // JSON 파일 생성//반환값이jsonoutput
-    navigate('/cart');
+  const handlePurchase = async () => {
+    const jsonData = generateJsonFile();
+
+    try {
+      const response = await fetch('http://localhost:8080/api/cart/1/items', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(jsonData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      navigate('/cart');
+    } catch (error) {
+      console.error('There was a problem with the fetch operation:', error);
+    }
   };
 
   return (

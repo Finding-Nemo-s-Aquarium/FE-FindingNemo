@@ -1,12 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
-
-:root {
-  --navigation-bar: 4px 9px 9.399999618530273px 0px rgba(0, 0, 0, 0.32);
-}
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
 
 /* 기본 여백 제거 */
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -24,16 +20,17 @@ body {
 .screen .overlap {
   background-size: 100% 100%;
   position: relative;
+  justify-content: center;
 }
 
-.screen .signin-format {
+.screen .signin-group {
   left: 137px;
   position: absolute;
   top: 120px;
   width: 448px;
 }
 
-.screen .format-top {
+.screen .top-format {
   height: 209px;
   left: 2px;
   position: absolute;
@@ -41,7 +38,7 @@ body {
   width: 370px;
 }
 
-.screen .clownfish {
+.top-format .clownfish {
   height: 35px;
   width: 35px;
   left: 0;
@@ -50,7 +47,7 @@ body {
   top: 0;
 }
 
-.screen .FINDINGNEMO-text {
+.top-format .FINDINGNEMO-text {
   color: #2845a3;
   font-family: 'Luckiest Guy', Helvetica, sans-serif;
   font-size: 27px;
@@ -66,9 +63,9 @@ body {
   font-weight: bold;
 }
 
-.screen .Signin-text {
+.top-format .Signin-text {
   color: #000000;
-  font-family: "Kanit-SemiBold", Helvetica;
+  font-family: 'Kanit', Helvetica, sans-serif;
   font-size: 60px;
   font-weight: 600;
   height: 82px;
@@ -82,7 +79,7 @@ body {
   width: 254px;
 }
 
-.screen .ID {
+.screen .NAME {
   height: 111px;
   left: 0;
   position: absolute;
@@ -91,9 +88,9 @@ body {
   font-size: 15px;
 }
 
-.screen .ID-text {
+.screen .NAME-text {
   color: #2845a3;
-  font-family: "Kanit-Regular", Helvetica;
+  font-family: 'Kanit', Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 400;
   height: 37px;
@@ -101,8 +98,30 @@ body {
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 0;
+  top: -5px;
   width: 129px;
+}
+
+.screen .PASSWORD {
+  height: 111px;
+  width: 380px;
+  left: 0;
+  position: absolute;
+  top: 280px;
+}
+
+.screen .PASSWORD-text {
+  color: #2845a3;
+  font-family: 'Kanit', Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  height: 37px;
+  left: 2px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: -5px;
+  width: 140px;
 }
 
 .screen .input-box {
@@ -117,36 +136,24 @@ body {
   top: 25px;
 }
 
-
-.screen .PASSWORD {
-  height: 111px;
-  width: 380px;
-  left: 0;
-  position: absolute;
-  top: 280px;
-}
-
-.screen .PASSWORD-text {
-  color: #2845a3;
-  font-family: "Kanit-Regular", Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  height: 37px;
-  left: 2px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 0;
-  width: 140px;
-}
-
 .screen .SIGNIN-instance {
-  left: 0 !important;
-  position: absolute !important;
-  top: 430px !important;
+  position: absolute;
+  top: 400px;
+  left: 0;
 }
 
-.screen .rectangle {
+.screen .dont-have-an-account {
+  color: #999999;
+  position: absolute;
+  top: 480px;
+}
+
+.screen .signup-link {
+  color: #2845a3;
+  cursor: pointer;
+}
+
+.screen .sign-goldfish-rectangle {
   height: 729px;
   left: 800px;
   position: absolute;
@@ -154,14 +161,10 @@ body {
   width: 720px;
 }
 
-.screen .group {
+.screen .BACKTO {
   height: 37px;
   left: 30px;
   position: absolute;
   top: 33px;
   width: 173px;
-}
-
-.screen .back-to-home-instance {
-  width: unset !important;
 }

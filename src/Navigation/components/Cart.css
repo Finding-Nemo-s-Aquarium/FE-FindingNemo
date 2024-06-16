@@ -1,26 +1,17 @@
 .CART {
-    height: 56px;
     position: relative;
-    width: 178px;
+    margin-top: -25px;
+    height: 35px;
+    width: 35px;
+    background-image: url('img/white_cart.png');
+    background-size: contain;
+    /* cover에서 contain으로 변경하여 이미지가 컨테이너에 맞게 조정되도록 함 */
+    background-repeat: no-repeat;
+    /* 이미지가 반복되지 않도록 설정 */
+    cursor: pointer;
+    /* 클릭 가능한 커서 모양 */
 }
 
-.CART .text-wrapper {
-    text-shadow: var(--navigation-bar);
-    color: #ffffff;
-    font-family: "NATS-Regular", Helvetica;
-    font-size: 32px;
-    font-weight: 400;
-    height: 56px;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    text-shadow: 4px 9px 9.4px #00000052;
-    top: -1px;
-    width: 178px;
-}
-
-.MAKE:hover .text-wrapper {
-    color: #ff9500;
+.CART:hover {
+    background-image: url('img/orange_cart.png');
 }

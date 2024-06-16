@@ -1,8 +1,7 @@
-import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import "./Cart.css"
 
-const Cart = ({ className }) => {
+const Cart = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -10,14 +9,8 @@ const Cart = ({ className }) => {
     };
 
     return (
-        <div className="CART">
-            <div className={`text-wrapper ${className}`} onClick={handleClick}>Cart</div>;
-        </div>
+            <div className="CART" onClick={handleClick}></div>
     );
-};
-
-Cart.propTypes = {
-    className: PropTypes.string.isRequired,
 };
 
 export default Cart;

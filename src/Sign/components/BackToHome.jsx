@@ -5,12 +5,12 @@ import './BackToHome.css';
 const BackToHome = () => {
   const navigate = useNavigate();
     
-  const handleClick = () => {
+  const handleBTH = () => {
       navigate('/home');
   }
   return (
     <div className="backToHome">
-      <div className="backToHome-text" onClick={handleClick}>Back to home</div>
+      <div className="backToHome-text" onClick={handleBTH}>Back to home</div>
     </div>);
 };
 

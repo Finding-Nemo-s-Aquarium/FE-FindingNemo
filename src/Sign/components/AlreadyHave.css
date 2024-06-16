@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+
+.SIGNIN {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 210px;
+    left: 0%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    height: 350px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Kanit;
+}
+
+.AlreadyHaveAnAccount {
+    color: #999;
+    white-space: pre-wrap;
+}
+
+.signin {
+    color: #2845a3;
+}
+
+.signin:hover {
+    color: #ff9500;
+}

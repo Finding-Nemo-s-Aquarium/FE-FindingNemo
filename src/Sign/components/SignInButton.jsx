@@ -2,20 +2,15 @@ import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import "./SignInButton.css";
 
-const SignInButton = ({ className, setIsLoggedIn }) => {
+const SignInButton = ({ className, handleSignIn }) => {
   const navigate = useNavigate();
 
-  // const handleClick = () => {
-  //   setIsLoggedIn(true);
-  //   navigate('/home');
-  // };
-
   const handleClick = async () => {
-    const email = document.getElementById('emailInput').value;
+    const username = document.getElementById('usernameInput').value;
     const password = document.getElementById('passwordInput').value;
 
     const signinData = {
-      username: email,
+      username: username,
       password: password,
     };
 
@@ -31,7 +26,7 @@ const SignInButton = ({ className, setIsLoggedIn }) => {
       if (response.ok) {
         const token = await response.text();
         localStorage.setItem('authToken', token);
-        setIsLoggedIn(true);
+        handleSignIn(true);
         navigate('/home');
       } else {
         const errorText = await response.text();
@@ -45,15 +40,17 @@ const SignInButton = ({ className, setIsLoggedIn }) => {
   };
 
   return (
-    <div className={`signin-button ${className}`} onClick={handleClick}>
-      <span className="text-wrapper">Sign in</span>
+    <div className="Button">
+      <div className={`signin-button ${className}`} onClick={handleClick}>
+        <span className="text-wrapper">Sign in</span>
+      </div>
     </div>
   );
 }
 
 SignInButton.propTypes = {
   className: PropTypes.string,
-  setIsLoggedIn: PropTypes.func.isRequired,
+  handleSignIn: PropTypes.func.isRequired,
 };
 
 export default SignInButton;

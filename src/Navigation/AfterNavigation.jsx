@@ -2,12 +2,15 @@ import { useNavigate } from 'react-router-dom';
 import FindingNemo from "./components/FindingNemo";
 import Make from "./components/Make";
 import Shop from "./components/Shop";
+import Magnifier from "./components/Magnifier";
+import Cart from "./components/Cart";
+import Profile from "./components/Profile";
 import "./AfterNavigation.css";
 
 const AfterNavigation = () => {
   const navigation = useNavigate();
 
-  const handleFindingNemoClick = () => {
+  const handleFindingNemo = () => {
     navigation('/home');
   };
 
@@ -15,7 +18,7 @@ const AfterNavigation = () => {
     <div className="AfterNavigation">
       <div className="text">
 
-        <div className="finding-nemo" onClick={handleFindingNemoClick}>
+        <div className="finding-nemo" onClick={handleFindingNemo}>
           <img className="clownfish" alt="Clownfish" src="img/logo_clownfish.png" />
           <FindingNemo className="finding-nemo-text" />
         </div>
@@ -26,9 +29,9 @@ const AfterNavigation = () => {
         </div>
 
         <div className="image">
-          <img className="Magnifier" alt="Magnifier" src="img/white_magnifier.png" />
-          <img className="Cart" alt="Cart" src="img/white_cart.png" />
-          <img className="Profile" alt="Profile" src="img/white_profile.png" />
+          <Magnifier className="MAGNIFIER-instance" />
+          <Cart className="CART-instance" />
+          <Profile className="PROFILE-instance" />
         </div>
 
       </div>

@@ -1,4 +1,6 @@
-.dontHaveAnAccountSignUp {
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+
+.SIGNUP {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -14,11 +16,18 @@
     font-family: Kanit;
 }
 
-.dontHaveAn {
-    color: #999;
+.DontHaveAnAccount {
+    color: #999999;
     white-space: pre-wrap;
 }
 
-.signUp {
+.signup {
     color: #2845a3;
+    cursor: pointer;
+    /* 클릭 가능하게 변경 */
+}
+
+
+.signup:hover {
+    color: #ff9500;
 }
