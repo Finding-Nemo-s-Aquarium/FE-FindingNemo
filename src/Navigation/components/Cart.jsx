@@ -9,7 +9,7 @@ const Cart = () => {
     };
 
     return (
-        <div className="CART" onClick={handleClick}></div>
+            <div className="CART" onClick={handleClick}></div>
     );
 };
 
