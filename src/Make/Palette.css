@@ -1,11 +1,11 @@
 .palette {
   display: flex;
-
+  
 }
 
 .category-button {
   margin-top: 15px;
-  width: 25%; 
+  width: 25%;
   font-family: 'Baloo 2', Helvetica, sans-serif;
 
 }
@@ -33,14 +33,10 @@
   border: white;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-  
+
 .palette-button.selected{
   background-color: white;
-}
-
-.palette-button.selected {
-  background-color: white;
-  border: white;
+  border: solid white 1px;
 }
 
 .image-list {
@@ -49,28 +45,48 @@
   padding-left: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
-
-
-  display: flex;
-  flex-wrap: wrap;
   overflow: auto;
-overflow-x: hidden;  
-background-color: rgba(255, 255, 255, 1);
-
+  overflow-x: hidden;
+  background-color: rgba(255, 255, 255, 1);
+  border: solid 1px white;
 
 }
 
-.image-item {
+.image-item-wrapper {
+  position: relative;
   margin-bottom: 10px;
   cursor: pointer;
   max-width: 95%;
   object-fit: contain;
 }
 
+.image-item {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
 .image-item:hover {
-opacity: 70%;}
+  opacity: 0.4;
+}
 
+.image-item-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
+.image-item-wrapper:hover .image-item-overlay {
+  opacity: 1;
+}
 
 
 

@@ -41,9 +41,18 @@ const categories = {
 
 const Palette = ({ handleImageSelect }) => {
   const [selectedCategory, setSelectedCategory] = useState('Fish');
+  const [hoveredImage, setHoveredImage] = useState(null);
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
+  };
+
+  const handleImageHover = (index) => {
+    setHoveredImage(index);
+  };
+
+  const handleImageLeave = () => {
+    setHoveredImage(null);
   };
 
   return (
@@ -61,15 +70,24 @@ const Palette = ({ handleImageSelect }) => {
       </div>
       {selectedCategory && (
         <div className="image-list">
-          {categories[selectedCategory].map(({ src, price }, index) => (
-            <img
+          {categories[selectedCategory].map(({ src, price, nameE }, index) => (
+            <div
               key={src}
-              src={src}
-              alt="이미지"
-              onClick={() => handleImageSelect(src, price, selectedCategory)}
-              className="image-item"
-              style={{ width: '100%', height: 'auto', zIndex: categoryZIndex[selectedCategory] + index }}
-            />
+              className="image-item-wrapper"
+              onMouseEnter={() => handleImageHover(index)}
+              onMouseLeave={handleImageLeave}
+              style={{ zIndex: categoryZIndex[selectedCategory] + index }}
+            >
+              <img
+                src={src}
+                alt="이미지"
+                onClick={() => handleImageSelect(src, price, selectedCategory)}
+                className="image-item"
+              />
+              {hoveredImage === index && (
+                <div className="image-item-overlay">{nameE}</div>
+              )}
+            </div>
           ))}
         </div>
       )}
