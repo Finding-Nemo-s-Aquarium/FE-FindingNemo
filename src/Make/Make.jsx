@@ -1,10 +1,17 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import Palette from './Palette.jsx';
 import Canvas from './Canvas.jsx';
 import Bill from './Bill.jsx';
+import BeforeNavigation from "../Navigation/BeforeNavigation";
+import AfterNavigation from "../Navigation/AfterNavigation";
 import './Make.css';
 
-function Make() {
+Make.propTypes = {
+  isLoggedIn: PropTypes.bool.isRequired,
+};
+
+function Make({ isLoggedIn }) {
   const [images, setImages] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -67,31 +74,29 @@ function Make() {
   };
 
   return (
-
     <div className='Make'>
-    <div className='Making' >
-    <div className="Edit">
       <div className="head">
-
+        {isLoggedIn ? <AfterNavigation /> : <BeforeNavigation />}
+          </div>
+      <div className='Making'>
+        <div className="Edit">
+          
+          <div className="body">
+            <Canvas
+              images={images}
+              handleImageDelete={handleImageDelete}
+              handleImageToFront={handleImageToFront}
+              handleImageToBack={handleImageToBack}
+              handleContextMenu={handleContextMenu}
+              updateImagePosition={updateImagePosition}
+            />
+            <Palette handleImageSelect={handleImageSelect} />
+          </div>
+        </div>
+        <div className="footer">
+          <Bill images={images} totalPrice={totalPrice} />
+        </div>
       </div>
-      <h3 id='make_comment'>MAKING YOUR AQUARIUM</h3>
-      <div className="body">
-        <Canvas
-          images={images}
-          handleImageDelete={handleImageDelete}
-          handleImageToFront={handleImageToFront}
-          handleImageToBack={handleImageToBack}
-          handleContextMenu={handleContextMenu}
-          updateImagePosition={updateImagePosition}
-        />
-        <Palette handleImageSelect={handleImageSelect} />
-      </div>
-      
-    </div>
-    <div className="footer">
-        <Bill images={images} totalPrice={totalPrice} />
-      </div>
-    </div>
     </div>
   );
 }
