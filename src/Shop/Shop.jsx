@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import BeforeNavigation from "../Navigation/BeforeNavigation";
 import AfterNavigation from '../Navigation/AfterNavigation';
+import ShopDetail from './components/ShopDetail';
 import "./Shop.css";
 
 const Shop = ({ isLoggedIn }) => {
@@ -10,30 +11,30 @@ const Shop = ({ isLoggedIn }) => {
 
     const categories = {
         Aquarium: [
-            { name: "Fish tank", img: "item/Fishtank.png" },
-            { name: "Fish bowl", img: "item/Fishbowl.png" }
+            { name: "Fish tank", src: "/item/Fishtank.png", price: 30 },
+            { name: "Fish bowl", src: "/item/Fishbowl.png", price: 20 }
         ],
         Fish: [
-            { name: "Guppy", img: "item/Guppy.png" },
-            { name: "Goldfish", img: "item/Goldfish.png" },
-            { name: "Betta", img: "item/Betta.png" },
-            { name: "Angelfish", img: "item/Angelfish.png" },
-            { name: "Tetra", img: "item/Tetra.png" }
+            { name: "Guppy", src: "/item/Guppy.png", price: 10 },
+            { name: "Goldfish", src: "/item/Goldfish.png", price: 10 },
+            { name: "Betta", src: "/item/Betta.png", price: 7 },
+            { name: "Angelfish", src: "/item/Angelfish.png", price: 28 },
+            { name: "Tetra", src: "/item/Tetra.png", price: 5 }
         ],
         Plant: [
-            { name: "Blyxa japonica", img: "item/Blyxa_japonica.png" },
-            { name: "Water sprite", img: "item/Water_sprite.png" },
-            { name: "Vallisneria", img: "item/Vallisneria.png" }
+            { name: "Blyxa japonica", src: "/item/Blyxa_japonica.png", price: 12 },
+            { name: "Water sprite", src: "/item/Water_sprite.png", price: 10 },
+            { name: "Vallisneria", src: "/item/Vallisneria.png", price: 15 }
         ],
         Stone: [
-            { name: "Egg stone", img: "item/Egg_stone.png" },
-            { name: "Blue dragon stone", img: "item/Blue_dragon_stone.png" },
-            { name: "Volcanic stone", img: "item/Volcanic_stone.png" }
+            { name: "Egg stone", src: "/item/Egg_stone.png", price: 6 },
+            { name: "Blue dragon stone", src: "/item/Blue_dragon_stone.png", price: 12 },
+            { name: "Volcanic stone", src: "/item/Volcanic_stone.png", price: 8 }
         ],
         Flooring: [
-            { name: "Black pebble", img: "item/Black_pebble.png" },
-            { name: "White pebble", img: "item/White_pebble.png" },
-            { name: "Multicolored pebble", img: "item/Multicolored_pebble.png" }
+            { name: "Black pebble", src: "/item/Black_pebble.png", price: 15 },
+            { name: "White pebble", src: "/item/White_pebble.png", price: 10 },
+            { name: "Multicolored pebble", src: "/item/Multicolored_pebble.png", price: 9 }
         ]
     };
 
@@ -44,6 +45,19 @@ const Shop = ({ isLoggedIn }) => {
 
     const handleItemClick = (item) => {
         setSelectedItem(item);
+    };
+
+    const handleAddToCart = (name, amount) => {
+        if (!isLoggedIn) {
+            alert('로그인을 해주세요.');
+            return;
+        }
+        // Add To Cart 버튼을 클릭하면, 상품 이름과 수량을 출력
+        console.log({ name, amount });
+    };
+
+    const handleCloseDetail = () => {
+        setSelectedItem(null);
     };
 
     const allItems = Object.values(categories).flat();
@@ -88,19 +102,22 @@ const Shop = ({ isLoggedIn }) => {
 
             <div className="gallery">
                 {selectedItem ? (
-                    <div className="gallery-item">
-                        <img src={selectedItem.img} alt={selectedItem.name} />
-                    </div>
+                    <ShopDetail 
+                        item={selectedItem} 
+                        onClose={handleCloseDetail} 
+                        onAddToCart={handleAddToCart}
+                        isLoggedIn={isLoggedIn}
+                    />
                 ) : selectedCategory ? (
                     categories[selectedCategory].map(item => (
                         <div className="gallery-item" key={item.name}>
-                            <img src={item.img} alt={item.name} />
+                            <img src={item.src} alt={item.name} onClick={() => handleItemClick(item)} />
                         </div>
                     ))
                 ) : (
                     allItems.map(item => (
                         <div className="gallery-item" key={item.name}>
-                            <img src={item.img} alt={item.name} />
+                            <img src={item.src} alt={item.name} onClick={() => handleItemClick(item)} />
                         </div>
                     ))
                 )}

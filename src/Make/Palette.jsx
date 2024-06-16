@@ -18,7 +18,7 @@ const categories = {
   Floor: [
     { name: "흑사", nameE: "Black sand", src: "/item/Black_pebble.png", price: 15 },
     { name: "백사", nameE: "White sand", src: "/item/White_pebble.png", price: 10 },
-    { name: "오색사", nameE: "Multicolored sand", src: "/item/Multicolored_peddle.png", price: 9 },
+    { name: "오색사", nameE: "Multicolored sand", src: "/item/Multicolored_pebble.png", price: 9 },
   ],
   Plant: [
     { name: "브릭샤 자포니카", nameE: "Blyxa japonica", src: "/item/Blyxa_japonica.png", price: 12 },
