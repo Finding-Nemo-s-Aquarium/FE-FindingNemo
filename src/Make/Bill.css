@@ -1,6 +1,7 @@
-p{
+p {
   margin: 10px;
 }
+
 .bill {
   display: flex;
   align-items: flex-start; /* Align items at the top */
@@ -8,57 +9,73 @@ p{
 }
 
 .bill-image-list {
-  flex: 3; /* Allow the image list to take available space */
   margin: 20px;
+  width: 70%;
 }
 
 .bill-image-container {
   display: flex;
   flex-wrap: wrap;
+  overflow: scroll
 }
 
 .bill-image-item {
   margin: 10px;
+  width: 120px; /* Fixed width for each image container */
+  height: 180px; /* Fixed height for each image container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd; /* Optional: add border for better visual separation */
+  border-radius: 10px; /* Optional: add border radius for rounded corners */
+  padding: 10px; /* Optional: add padding inside the container */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
 }
 
 .selected-image {
   max-width: 100px; /* Adjust based on your needs */
+  max-height: 100px; /* Adjust based on your needs */
   height: auto;
 }
-.total{
-  flex: 1; /* Allow result to take up space proportionally */
+.bill-info{
+  width: 30%;
   margin: 20px;
-  margin-left: 20px; /* Ensure it has some margin from the image list */
-  padding-top: 20px; /* Align better vertically */
-  border-radius: 70px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+.total {
+  padding: 50px; /* Align better vertically */
+  border-radius: 50px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  margin-bottom: 20px;
 }
 
-#comment{
-  font-size: 35px;
+#comment {
+  font-size: 20px;
   text-align: center;
-
 }
+
 #result {
-  font-size:60px; /* Increase font size */
+  font-size: 40px; /* Increase font size */
   font-weight: bold; /* Make text bold */
   text-align: center;
 }
-#purchase{
+
+#Purchase {
   border: none;
-  font-size: 40px;
-  padding: 3%;
+  align-items:end ;
+  width: 100%;
+  height: 100px;
+  font-size: 20px;
+  padding: 5%;
   background-color: cornflowerblue;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-bottom:5%;
-  border-radius: 50px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-
+  margin-bottom: 5%;
+  border-radius: 40px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-#purchase:hover{
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1); 
-  background-color: orange;
 
+#purchase:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  background-color: orange;
 }
