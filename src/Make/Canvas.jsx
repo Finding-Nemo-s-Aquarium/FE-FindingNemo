@@ -1,19 +1,17 @@
-import React from 'react';// eslint-disable-line no-unused-vars
+import React from 'react';
 import Draggable from 'react-draggable';
 import PropTypes from 'prop-types';
-import'./Canvas.css'
+import './Canvas.css';
 
-const Canvas = ({ images, handleImageDelete, handleImageToFront, handleContextMenu, updateImagePosition }) => {
+const Canvas = ({ images, handleImageDelete, handleImageToFront, handleImageToBack, handleContextMenu, updateImagePosition }) => {
 
-  // 드래그 시작 시 호출되는 함수
-  const handleDragStart = (e, data) => {// eslint-disable-line no-unused-vars
-    e.stopPropagation(); // 이벤트 전파 중단
+  const handleDragStart = (e, data) => {
+    e.stopPropagation();
   };
 
-  // 드래그 종료 시 호출되는 함수
   const handleStop = (e, data, index) => {
-    updateImagePosition(index, data.x, data.y); // 이미지 위치 업데이트
-    handleImageToFront(index); // 이미지를 화면 앞으로 가져오기
+    updateImagePosition(index, data.x, data.y);
+    handleImageToFront(index);
   };
 
   return (
@@ -29,22 +27,22 @@ const Canvas = ({ images, handleImageDelete, handleImageToFront, handleContextMe
             style={{ zIndex: image.zIndex, position: 'absolute', height: "100px", width: "100px" }}
             onContextMenu={(e) => handleContextMenu(e, image.id, index)}
           >
-            <img src={image.src} alt="이미지" onDragStart={handleDragStart} />
-            <button onClick={() => handleImageDelete(image.id, image.price)}>삭제</button>
+            <img src={image.src} alt="이미지" onDragStart={handleDragStart}  onContextMenu={(e) => handleContextMenu(e, image.id, index)}
+              onDoubleClick={() => handleImageDelete(image.id, image.price)} />
           </div>
         </Draggable>
       ))}
     </div>
   );
-}
+};
 
-// prop 유효성 검사
 Canvas.propTypes = {
-  images: PropTypes.array.isRequired, // images 배열은 필수로 전달되어야 하며 배열 형태여야 함
-  handleImageDelete: PropTypes.func.isRequired, // 이미지 삭제 함수가 필수로 전달되어야 함
-  handleImageToFront: PropTypes.func.isRequired, // 이미지를 앞으로 가져오는 함수가 필수로 전달되어야 함
-  handleContextMenu: PropTypes.func.isRequired, // 이미지 우클릭 메뉴 처리 함수가 필수로 전달되어야 함
-  updateImagePosition: PropTypes.func.isRequired, // 이미지 위치 업데이트 함수가 필수로 전달되어야 함
+  images: PropTypes.array.isRequired,
+  handleImageDelete: PropTypes.func.isRequired,
+  handleImageToFront: PropTypes.func.isRequired,
+  handleImageToBack: PropTypes.func.isRequired,
+  handleContextMenu: PropTypes.func.isRequired,
+  updateImagePosition: PropTypes.func.isRequired,
 };
 
 export default Canvas;
