@@ -8,6 +8,7 @@ import "./Shop.css";
 const Shop = ({ isLoggedIn }) => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [selectedItem, setSelectedItem] = useState(null);
+    const [cart, setCart] = useState([]);
 
     const categories = {
         Aquarium: [
@@ -52,8 +53,20 @@ const Shop = ({ isLoggedIn }) => {
             alert('로그인을 해주세요.');
             return;
         }
-        // Add To Cart 버튼을 클릭하면, 상품 이름과 수량을 출력
-        console.log({ name, amount });
+        // Add To Cart 버튼을 클릭하면, 상품 이름과 수량을 cart에 추가
+        setCart(prevCart => [...prevCart, { name, amount }]);
+        generateJsonFile([...cart, { name, amount }]);
+    };
+
+    // JSON 파일 생성
+    const generateJsonFile = (cartItems) => {
+        const jsonOutput = cartItems.map(item => ({
+            name: item.name,
+            amount: item.amount
+        }));
+
+        console.log(JSON.stringify(jsonOutput, null, 2)); // consol 출력
+        return jsonOutput; // json 파일을 jsonOutput에 저장
     };
 
     const handleCloseDetail = () => {
