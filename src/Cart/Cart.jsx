@@ -26,16 +26,15 @@ function Cart({ isLoggedIn }) {
   return (
     <div className="Cart">
       <img id="cart-background" src="public/img/cart-background.png" alt="배경화면" />
-
       <div className="cart-head">
         {isLoggedIn ? <AfterNavigation /> : <BeforeNavigation />}
       </div>
+      <div className='cart-body'>
       <h1 id='title'>C A R T</h1>
       <h2 id='itemlist'>ITEM LIST</h2>
-      
-      <div className="cart-body">
+      <div className="cart-item-list">
         {items.length === 0 ? (
-          <p style={{textAlign:"center",fontSize:'25px',borderRadius:'20px',padding:'10px'}}>Your cart is empty.</p>
+          <p style={{textAlign:"center",fontSize:'25px',borderRadius:'20px',padding:'10px',opacity:'0.5'}}>Your cart is empty.</p>
         ) : (
           <>
             {items.map((item, index) => (
@@ -49,9 +48,14 @@ function Cart({ isLoggedIn }) {
           </>
         )}
       </div>
+      <h2 id='itemlist'>TOTAL</h2>
       <div className="cart-total">
         Total Price: {total.toLocaleString()}$
       </div>
+              Total Price: {items.reduce((acc, item) => acc + item.price * item.amount, 0).toLocaleString()}$
+            </div>
+      </div>
+
     </div>
   );
 }

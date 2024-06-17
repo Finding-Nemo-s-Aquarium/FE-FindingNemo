@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 /* 기본 여백 제거 */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -14,6 +17,47 @@ html, body {
     height: 100vh;
     display: flex;
     position: relative;
-    padding-bottom: 300px; /* main_nemo 사진 크기만큼의 빈 공간 */
-    box-shadow: inset 0 100px 200px rgba(0, 0, 0, 0.3); /* 내부 그림자 효과 추가 */
+    padding-bottom: 300px;
+    /* main_nemo 사진 크기만큼의 빈 공간 */
+    box-shadow: inset 0 100px 200px rgba(0, 0, 0, 0.3);
+    /* 내부 그림자 효과 추가 */
+}
+
+.title {
+    position: fixed;
+    bottom: 60px;
+    left: 120px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 130px;
+    color: white;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+}
+
+/* 반응형 설정 */
+@media (max-width: 1200px) {
+    .title {
+        left: 80px;
+        font-size: 110px;
+    }
+}
+
+@media (max-width: 992px) {
+    .title {
+        left: 60px;
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        left: 40px;
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        left: 20px;
+        font-size: 50px;
+    }
 }
