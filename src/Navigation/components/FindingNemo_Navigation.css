@@ -2,21 +2,22 @@
 
 .finding-nemo {
     height: 64px;
-    position: relative;
-    width: 200px;
+    /* position: relative; */
+    /* width: 130px; */
+
 }
 
 .finding-nemo .text-wrapper {
     color: #ffffff;
     font-family: 'Luckiest Guy', Helvetica, sans-serif;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 400;
-    height: 64px;
-    line-height: normal;
-    position: absolute;
+    margin-left: -160px !important;
+    /* line-height: 10px; */
+    padding-left: 12px;
+    /* position: absolute; */
     text-align: center;
     text-shadow: 4px 9px 9.4px #00000052;
-    width: 170px;
 }
 
 .finding-nemo:hover .text-wrapper {

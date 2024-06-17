@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import "./FindingNemo.css";
+import "./FindingNemo_Navigation.css";
 
-const FindingNemo = ({ className }) => {
+const FindingNemo_Navigation = ({ className }) => {
   return (
     <div className="finding-nemo">
       <div className={`text-wrapper ${className}`}>Finding Nemo</div>
@@ -9,8 +9,8 @@ const FindingNemo = ({ className }) => {
   );
 };
 
-FindingNemo.propTypes = {
+FindingNemo_Navigation.propTypes = {
   className: PropTypes.string.isRequired,
 };
 
-export default FindingNemo;
+export default FindingNemo_Navigation;
