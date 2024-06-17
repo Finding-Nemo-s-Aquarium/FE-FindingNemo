@@ -30,6 +30,10 @@ const Home = ({ isLoggedIn }) => {
             <div className="background">
                 {isLoggedIn ? <AfterNavigation /> : <BeforeNavigation />}
             </div>
+
+            <div className="title">
+                FINDING NEMO
+            </div>
         </div>
     );
 };
