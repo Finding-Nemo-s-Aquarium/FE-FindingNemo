@@ -9,7 +9,7 @@ function Cart({ isLoggedIn }) {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/cart/1')  // 백엔드 API 엔드포인트로 변경
+    fetch('http://localhost:8080/api/cart/1')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -17,11 +17,16 @@ function Cart({ isLoggedIn }) {
         return response.json();
       })
       .then(data => {
-        setItems(data.items);  // 백엔드 응답에서 items만 설정
-        setTotal(data.total);  // 백엔드 응답에서 total 설정
+        setItems(data.items);
+        setTotal(data.total);
       })
       .catch(error => console.error('Error fetching data:', error));
   }, []);
+
+  const handleCheckout = () => {
+    alert('Redirecting to checkout...');  // 예시로 경고창을 띄우는 코드
+    // 실제 구매 처리 로직을 추가할 수 있습니다.
+  };
 
   return (
     <div className="Cart">
@@ -30,7 +35,7 @@ function Cart({ isLoggedIn }) {
         {isLoggedIn ? <AfterNavigation /> : <BeforeNavigation />}
       </div>
       <div className='cart-body'>
-        <h1 id='title'>C A R T</h1>
+        <h1 id='title'>CART</h1>
         <h2 id='itemlist'>ITEM LIST</h2>
         <div className="cart-item-list">
           {items.length === 0 ? (
@@ -43,14 +48,18 @@ function Cart({ isLoggedIn }) {
                   <span className='cart-item-name'>{item.name}</span>
                   <span className='cart-item-price'>{item.price.toLocaleString()}$</span>
                   <span className='cart-item-amount'>Amount: {item.amount}</span>
+                  <span className='cart-item-totalprice'>{item.price * item.amount}$</span>
                 </div>
               ))}
             </>
           )}
         </div>
-        <h2 id='itemlist'>TOTAL</h2>
         <div className="cart-total">
-          Total Price: {total.toLocaleString()}$
+          <span id='tttext1'>Total Price:</span> 
+          <span id='tttext2'>{total.toLocaleString()}$</span>
+        </div>
+        <div className="cart-purchase">
+          <button className="purchase" onClick={handleCheckout}>Purchase</button>
         </div>
       </div>
     </div>
