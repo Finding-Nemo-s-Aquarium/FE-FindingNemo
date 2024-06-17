@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400&display=swap');
 
-
-.Cart span{
+.Cart span {
   font-family: 'Baloo 2', Helvetica, sans-serif;
-  text-align: right;
-  margin-left: 10%;
-  font-size: 20px; /* 원하는 크기로 조절 */
-  color: #333; /* 텍스트 색상 설정 */
+  margin-left: 5%;
+  font-size: 30px;
+  color: #333;
 }
 
 .cart-head {
@@ -15,30 +13,34 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.2); /* 배경색상과 투명도 조절 */
+  background-color: rgba(255, 255, 255, 0.2);
   display: flex;
-  z-index: 1000; /* 다른 요소보다 위에 나타나도록 설정 */
-  backdrop-filter: blur(5px); /* 배경을 흐리게 만들기 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 추가 */
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-#title{
+
+#title {
   font-family: 'Baloo 2', Helvetica, sans-serif;
-  font-size: 50px;
+  font-size: 70px;
   position: relative;
   text-align: center;
   color: white;
 }
-#itemlist{
+
+#itemlist {
   font-family: 'Baloo 2', Helvetica, sans-serif;
+  padding-left: 5%;
   z-index: 2;
   color: white;
 }
+
 .Cart {
-  font-family: 'Baloo ', Helvetica, sans-serif;
+  font-family: 'Baloo', Helvetica, sans-serif;
   display: flex;
-  flex-direction: column; /* 세로 방향으로 정렬 */
+  flex-direction: column;
   align-items: center;
-  position: relative; /* 부모 요소로부터 상대적 위치 지정 */
+  position: relative;
 }
 
 #cart-background {
@@ -50,11 +52,13 @@
   object-fit: cover;
   filter: blur(2px);
 }
-.cart-body{
-  width:60%;
+
+.cart-body {
+  width: 60%;
   position: relative;
   margin-top: 10%;
 }
+
 .cart-item-list {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 50px;
@@ -65,45 +69,85 @@
   margin-bottom: 5%;
 }
 
-
 .cart-item {
   display: flex;
   align-items: center;
   padding: 30px;
-  border-bottom: 1px solid #ddd;
+}
+
+.cart-item:not(:last-child) {
+  border-bottom: 1px solid white;
 }
 
 .cart-item-img {
-  width: 200px;
-  height:auto;
+  width: 20%;
+  height: 200px;
   margin-right: 40px;
 }
 
-.cart-item-info {
-
-  display: flex;
-  flex-direction: column;
-}
-
 .cart-item-name {
+  width: 20%;
+  padding-left: 2%;
   font-weight: bold;
-  margin-bottom: 5px;
+  font-size: 50px;
 }
 
 .cart-item-price,
 .cart-item-amount {
+  width: 12%;
   color: #555;
+}
+
+.cart-item-totalprice {
+  font-weight: bold;
+  font-size: 40px !important;
 }
 
 .cart-total {
   font-family: 'Baloo 2', Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   z-index: 2;
-  text-align: right;
-  font-size: 30px;
   padding: 50px;
   border-radius: 50px;
   backdrop-filter: blur(5px);
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#tttext1{
+  font-size: 70px;
+  font-style: 'bold';
+
+}
+#tttext2 {
+  font-size: 70px;
+  margin-right: 1%;
+}
+.cart-purchase {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px; /* 원하는 여백 설정 */
+}
+
+.purchase {
+  font-family: 'Baloo 2', Helvetica, sans-serif;
+  height: 150px;
+  width:300px;
+  border-radius: 100px;
+  padding: 10px 20px;
+  font-size: 50px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.1s cubic-bezier(.25,.8,.25,1);
+
+}
+
+.purchase:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  background-color: #FF9500;
 }
