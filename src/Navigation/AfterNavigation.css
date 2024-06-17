@@ -16,14 +16,14 @@
 
 .AfterNavigation .finding-nemo {
   position: absolute;
-  left: 40px;
+  left: 310px;
   display: flex;
   /* width: 100px !important; */
   /* top: 10px; */
 }
 
 .AfterNavigation .finding-nemo .clownfish {
-  margin-top: 2px;
+  margin-top: 0px;
   height: 40px;
   width: 40px;
   margin-left: 110px !important;
