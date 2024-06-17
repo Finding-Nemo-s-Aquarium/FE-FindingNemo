@@ -31,12 +31,12 @@ function Cart({ isLoggedIn }) {
           <div key={item.id} className='cart-item'>
             <img className='cart-item-img' src={item.src} alt="사진" />
               <span className='cart-item-name'>{item.name}</span>
-              <span className='cart-item-price'>{item.price.toLocaleString()}원</span>
-              <span className='cart-item-amount'>수량: {item.amount}</span>
+              <span className='cart-item-price'>{item.price.toLocaleString()}$</span>
+              <span className='cart-item-amount'>Amount: {item.amount}</span>
           </div>
         ))}
         <div className="total">
-          총 합계: {dummyData.reduce((acc, item) => acc + item.price * item.amount, 0).toLocaleString()}원
+          Total Price: {dummyData.reduce((acc, item) => acc + item.price * item.amount, 0).toLocaleString()}원
         </div>
       </div>
     </div>
