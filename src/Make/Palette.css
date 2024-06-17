@@ -63,7 +63,7 @@
 .image-item {
   width: 100%;
   height: auto;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.1s ease;
 }
 
 .image-item:hover {
