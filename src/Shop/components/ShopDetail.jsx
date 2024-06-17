@@ -32,7 +32,7 @@ const ShopDetail = ({ item, onClose, onAddToCart, isLoggedIn }) => {
                     <div className="shop-detail-info">
                         <h2>{item.name}</h2>
                         <p>${item.price}</p>
-                        <p>Description: This is {item.name}. Nice to meet you.</p>
+                        <p>Description: This is {item.name}.</p>
 
                         <div className="amount-selector">
                             <button onClick={() => handleAmountChange(-1)}>-</button>
