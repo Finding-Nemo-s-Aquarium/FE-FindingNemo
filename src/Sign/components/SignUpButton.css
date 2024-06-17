@@ -3,8 +3,8 @@
 .signup-button {
     background-color: #2845a3;
     border-radius: 17px;
-    height: 74px;
-    width: 448px;
+    height: 40px;
+    width: 370px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,6 +18,6 @@
 
 .text-wrapper {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }

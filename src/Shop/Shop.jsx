@@ -8,6 +8,7 @@ import "./Shop.css";
 const Shop = ({ isLoggedIn }) => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [selectedItem, setSelectedItem] = useState(null);
+
     //const navigate = useNavigate();
 
     const categories = {
