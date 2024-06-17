@@ -3,11 +3,10 @@
 .finding-nemo {
     height: 64px;
     position: relative;
-    width: 262px;
+    width: 200px;
 }
 
 .finding-nemo .text-wrapper {
-    text-shadow: var(--navigation-bar);
     color: #ffffff;
     font-family: 'Luckiest Guy', Helvetica, sans-serif;
     font-size: 22px;
@@ -17,7 +16,7 @@
     position: absolute;
     text-align: center;
     text-shadow: 4px 9px 9.4px #00000052;
-    width: 262px;
+    width: 170px;
 }
 
 .finding-nemo:hover .text-wrapper {

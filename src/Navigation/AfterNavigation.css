@@ -9,7 +9,7 @@
   width: 90%;
   margin: 50px auto 0 auto;
   /* 네비게이션 바의 상단 여백과 중앙 정렬 */
-  max-width: 1300px;
+  max-width: 1400px;
   /* 최대 너비를 설정하여 큰 화면에서도 중앙에 위치 */
 }
 
@@ -28,7 +28,7 @@
 
 .AfterNavigation .finding-nemo .finding-nemo-text {
   margin-top: 15px;
-  margin-left: -40px;
+  margin-left: 0px;
   /* clownfish와 Finding Nemo 사이의 간격 */
   white-space: nowrap;
   /* 텍스트를 한 줄로 유지 */

@@ -1,28 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
 
 .SIGNIN {
-    position: absolute;
+    position: relative;
     height: 100%;
     width: 100%;
-    top: 210px;
+    margin-top: -100px;
     left: 0%;
     display: flex;
     align-items: center;
     width: 100%;
     position: relative;
-    height: 350px;
+    height: 30px;
     text-align: center;
     font-size: 18px;
     font-family: Kanit;
 }
 
 .AlreadyHaveAnAccount {
-    color: #999;
+    color: #999999;
     white-space: pre-wrap;
 }
 
 .signin {
     color: #2845a3;
+    cursor: pointer;
+    /* 클릭 가능하게 변경 */
 }
 
 .signin:hover {

@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo:wght@400&display=swap');
 
-.backToHome {
+.SignInBackToHome {
     width: 100%;
     position: relative;
     height: 37px;
     text-align: center;
-    font-size: 19px;
+    font-size: 23px;
     color: #2845a3;
     font-family: Kanit;
 }
 
-.backToHome-text {
+.SignInBackToHome-text {
     position: absolute;
     height: 100%;
     width: 100%;
-    top: 0%;
-    left: 0%;
+    top: -200%;
+    left: -50%; /* backToHome의 왼쪽 위치 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,6 +24,6 @@
     cursor: pointer;
 }
 
-.backToHome:hover .backToHome-text {
+.SignInBackToHome:hover .SignInBackToHome-text {
     color: #ff9500;
 }
