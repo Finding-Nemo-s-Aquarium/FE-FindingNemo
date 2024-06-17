@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400&display=swap');
+
+
+.Cart span{
+  font-family: 'Baloo 2', Helvetica, sans-serif;
+  text-align: right;
+  margin-left: 10%;
+  font-size: 20px; /* 원하는 크기로 조절 */
+  color: #333; /* 텍스트 색상 설정 */
+}
+
 .cart-head {
   position: absolute;
   top: 0;
@@ -10,12 +22,19 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 추가 */
 }
 #title{
+  font-family: 'Baloo 2', Helvetica, sans-serif;
   font-size: 50px;
   margin-top: 15%;
   position: relative;
   color: white;
 }
+#itemlist{
+  font-family: 'Baloo 2', Helvetica, sans-serif;
+  z-index: 2;
+  color: white;
+}
 .Cart {
+  font-family: 'Baloo ', Helvetica, sans-serif;
   display: flex;
   flex-direction: column; /* 세로 방향으로 정렬 */
   align-items: center;
@@ -33,10 +52,10 @@
 }
 
 .cart-body {
-  width: 60%;
+  width: 50%;
   margin-top: 5%;
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
+  padding: 50px;
   border-radius: 50px;
   backdrop-filter: blur(5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -47,7 +66,7 @@
 .cart-item {
   display: flex;
   align-items: center;
-  padding: 10px 0;
+  padding: 30px;
   border-bottom: 1px solid #ddd;
 }
 
@@ -58,6 +77,7 @@
 }
 
 .cart-item-info {
+
   display: flex;
   flex-direction: column;
 }
@@ -72,7 +92,17 @@
   color: #555;
 }
 
-.total {
-  font-weight: bold;
-  text-align: right;
+.cart-total {
+    font-family: 'Baloo 2', Helvetica, sans-serif;
+
+  z-index: 2;
+  text-align: center;
+font-size: 30px;
+  width: 50%;
+  margin-top: 5%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 50px;
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

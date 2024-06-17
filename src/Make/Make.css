@@ -1,38 +1,37 @@
-.Make{
-  background-image:url("../../public/img/cart-background.png");
+.Make {
+  background-image: url("../../public/img/cart-background.png");
   background-size: cover;
   background-repeat: repeat-y;
-    font-family: 'Baloo 2', Helvetica, sans-serif;
-
+  background-attachment: fixed; /* 배경 이미지 고정 */
+  font-family: 'Baloo 2', Helvetica, sans-serif;
 }
+
 .head {
   position: absolute;
   width: 100%;
-
   background-color: none;
 }
 
-.Making{
+.Making {
   margin-bottom: 5%;
   margin-left: 10%;
   margin-right: 10%;
   padding: 2%;
 }
+
 .Edit {
   margin-top: 7%;
-
   display: flex;
   flex-direction: column;
   height: 80vh;
 }
-#make_comment{
 
-  color:#f0f0f0;
+#make_comment {
+  color: #f0f0f0;
   text-align: right;
 }
 
 .body {
-  
   background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   flex: 1;
@@ -51,19 +50,15 @@
   height: 100%;
   margin-right: 30px;
   background-color: white;
-
 }
 
 .palette {
   flex-direction: row;
   flex: 1;
-
 }
 
 .footer {
-
   background-color: #f0f0f0;
   padding: 10px;
   border-radius: 50px;
-
 }

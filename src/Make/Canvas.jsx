@@ -27,8 +27,8 @@ const Canvas = ({ images, handleImageDelete, handleImageToFront, handleImageToBa
             style={{ zIndex: image.zIndex, position: 'absolute', height: "100px", width: "100px" }}
             onContextMenu={(e) => handleContextMenu(e, image.id, index)}
           >
-            <img src={image.src} alt="이미지" onDragStart={handleDragStart} />
-            <button onClick={() => handleImageDelete(image.id, image.price)}>삭제</button>
+            <img src={image.src} alt="이미지" onDragStart={handleDragStart}  onContextMenu={(e) => handleContextMenu(e, image.id, index)}
+              onDoubleClick={() => handleImageDelete(image.id, image.price)} />
           </div>
         </Draggable>
       ))}

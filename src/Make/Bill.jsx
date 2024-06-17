@@ -54,12 +54,12 @@ const Bill = ({ images, totalPrice }) => {
   return (
     <div className="bill">
       <div className="bill-image-list">
-        <p style={{ margin: 0, fontSize: '30px' }}>Selected Images</p>
+        <p style={{ margin: 0, fontSize: '30px' }}>Selected Items</p>
         <div className="bill-image-container">
           {groupedImages.map(image => (
             <div key={image.src} className="bill-image-item">
+              <span>{image.src.split('/').pop().replace(/\.[^/.]+$/, '')}</span>
               <img src={image.src} alt="Selected Image" className="selected-image" />
-              <span>{image.name}</span>
               <span>{image.price}$ x {image.quantity}</span>
               <span> = {image.totalPrice}$</span>
             </div>
@@ -67,11 +67,11 @@ const Bill = ({ images, totalPrice }) => {
         </div>
       </div>
       <div className='bill-info'>
-        <div className='total'>
+        <div className='bill-total'>
           <p id="comment">Total Price:</p>
           <p id="result">{totalPrice}$</p>
         </div>
-        <button id="Purchase" onClick={handlePurchase}>Purchase</button>
+        <button id="Purchase" onClick={handlePurchase}></button>
       </div>
     </div>
   );

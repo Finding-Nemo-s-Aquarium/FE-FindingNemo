@@ -8,12 +8,13 @@ import "./Shop.css";
 const Shop = ({ isLoggedIn }) => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [selectedItem, setSelectedItem] = useState(null);
-    const [cart, setCart] = useState([]);
+
+    //const navigate = useNavigate();
 
     const categories = {
         Aquarium: [
-            { name: "Fish tank", src: "/item/Fishtank.png", price: 30 },
-            { name: "Fish bowl", src: "/item/Fishbowl.png", price: 20 }
+            { name: "Fishtank", src: "/item/Fishtank.png", price: 30 },
+            { name: "Fishbowl", src: "/item/Fishbowl.png", price: 20 }
         ],
         Fish: [
             { name: "Guppy", src: "/item/Guppy.png", price: 10 },
@@ -23,19 +24,19 @@ const Shop = ({ isLoggedIn }) => {
             { name: "Tetra", src: "/item/Tetra.png", price: 5 }
         ],
         Plant: [
-            { name: "Blyxa japonica", src: "/item/Blyxa_japonica.png", price: 12 },
-            { name: "Water sprite", src: "/item/Water_sprite.png", price: 10 },
+            { name: "Blyxa_japonica", src: "/item/Blyxa_japonica.png", price: 12 },
+            { name: "Water_sprite", src: "/item/Water_sprite.png", price: 10 },
             { name: "Vallisneria", src: "/item/Vallisneria.png", price: 15 }
         ],
         Stone: [
-            { name: "Egg stone", src: "/item/Egg_stone.png", price: 6 },
-            { name: "Blue dragon stone", src: "/item/Blue_dragon_stone.png", price: 12 },
-            { name: "Volcanic stone", src: "/item/Volcanic_stone.png", price: 8 }
+            { name: "Egg_stone", src: "/item/Egg_stone.png", price: 6 },
+            { name: "Blue_dragon_stone", src: "/item/Blue_dragon_stone.png", price: 12 },
+            { name: "Volcanic_stone", src: "/item/Volcanic_stone.png", price: 8 }
         ],
         Flooring: [
-            { name: "Black pebble", src: "/item/Black_pebble.png", price: 15 },
-            { name: "White pebble", src: "/item/White_pebble.png", price: 10 },
-            { name: "Multicolored pebble", src: "/item/Multicolored_pebble.png", price: 9 }
+            { name: "Black_sand", src: "/item/Black_pebble.png", price: 15 },
+            { name: "White_sand", src: "/item/White_pebble.png", price: 10 },
+            { name: "Multicolored_sand", src: "/item/Multicolored_pebble.png", price: 9 }
         ]
     };
 
@@ -48,25 +49,44 @@ const Shop = ({ isLoggedIn }) => {
         setSelectedItem(item);
     };
 
-    const handleAddToCart = (name, amount) => {
+    const handleAddToCart = async (name, amount) => {
         if (!isLoggedIn) {
             alert('로그인을 해주세요.');
             return;
         }
-        // Add To Cart 버튼을 클릭하면, 상품 이름과 수량을 cart에 추가
-        setCart(prevCart => [...prevCart, { name, amount }]);
-        generateJsonFile([...cart, { name, amount }]);
-    };
 
-    // JSON 파일 생성
-    const generateJsonFile = (cartItems) => {
-        const jsonOutput = cartItems.map(item => ({
+        const item = Object.values(categories).flat().find(item => item.name === name);
+        if (!item) {
+            console.error("Item not found:", name);
+            return;
+        }
+
+        console.log("Item to be added:", item); // item 객체 확인
+
+        const jsonData = [{
             name: item.name,
-            amount: item.amount
-        }));
+            amount: amount
+        }];
 
-        console.log(JSON.stringify(jsonOutput, null, 2)); // consol 출력
-        return jsonOutput; // json 파일을 jsonOutput에 저장
+        console.log("JSON Data to be sent:", JSON.stringify(jsonData, null, 2)); // 데이터를 전송하기 전에 출력하여 확인
+
+        try {
+            const response = await fetch('http://localhost:8080/api/cart/1/items', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(jsonData),
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            console.log('Data successfully sent to the server');
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+        }
     };
 
     const handleCloseDetail = () => {
