@@ -1,59 +1,45 @@
 import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
-import BackToHome from "./components/BackToHome";
-import SignInButton from "./components/SignInButton";
+import SignInButton from './components/SignInButton';
+import DontHave from './components/DontHave';
+import SignInBackToHome from './components/SignInBackToHome';
 import "./SignIn.css";
 
 const SignIn = ({ setIsLoggedIn }) => {
-  const navigate = useNavigate();
 
-  const handleSignIn = () => {
-    setIsLoggedIn(true);
-    navigate('/home');
-  };
-
-  const handleSignUp = () => {
-    navigate('/signup');
+  const handleSignIn = (isLoggedIn) => {
+    setIsLoggedIn(isLoggedIn);
   };
 
   return (
-    <div className="screen">
-      <div className="overlap">
+    <div className="signin-container">
 
-        <div className="signin-group">
+      <div className="signin-left-panel">
+        <div className="input-container">
+          <SignInBackToHome />
 
-          <div className="top-format">
+          <div className="header">
             <img className="clownfish" alt="Clownfish" src="img/logo_clownfish.png" />
-            <div className="FINDINGNEMO-text">FINDING NEMO</div>
-            <div className="Signin-text">Sign in</div>
+            <span className="finding-nemo-text">FINDING NEMO</span>
           </div>
 
-          <div className="NAME">
-            <div className="NAME-text">NAME</div>
+          <div className="signin-text">Sign in</div>
+
+          <form className="signin-form" onSubmit={(e) => e.preventDefault()}>
+            <label htmlFor="username" className="input-label">USERNAME</label>
             <input className="input-box" type="text" id="usernameInput" name="username" placeholder="Enter your username" required />
-          </div>
+            
+            <label htmlFor="password" className="input-label">PASSWORD</label>
+            <input className="input-box" type="password" id="passwordInput" name="password" placeholder="********" required />
+            
+            <SignInButton className="signin-button" handleSignIn={handleSignIn} />
+          </form>
 
-          <div className="PASSWORD">
-            <div className="PASSWORD-text">PASSWORD</div>
-            <input className="input-box" type="password" id="passwordInput" name="password" placeholder="Enter your password" required />
-          </div>
-
-          <SignInButton className="SIGNIN-instance" handleSignIn={handleSignIn} />
-
-          <div className="dont-have-an-account">
-            <span>Don&apos;t have an account? </span>
-            <span className="signup-link" onClick={handleSignUp}>Sign up</span>
-          </div>
-
+          <DontHave />
         </div>
-
-        <img className="sign-goldfish-rectangle" alt="sign-goldfish" src="img/sign_goldfish.jpg" />
-        
-        <div className="BACKTO">
-          <BackToHome className="back-to-home-instance" property1="default" />
-        </div>
-
       </div>
+
+      <div className="signin-right-panel"></div>
+
     </div>
   );
 };
