@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import "./Profile.css"
+import "./Profile_Navigation.css"
 
-const Profile = () => {
+const Profile_Navigation = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -13,4 +13,4 @@ const Profile = () => {
     );
 };
 
-export default Profile;
+export default Profile_Navigation;

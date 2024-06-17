@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import "./SignIn.css";
+import "./SignIn_Navigation.css";
 
-const SignIn = ({ className }) => {
+const SignIn_Navigation = ({ className }) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -18,8 +18,8 @@ const SignIn = ({ className }) => {
     );
 };
 
-SignIn.propTypes = {
+SignIn_Navigation.propTypes = {
     className: PropTypes.string.isRequired,
 };
 
-export default SignIn;
+export default SignIn_Navigation;

@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
-import FindingNemo from "./components/FindingNemo";
-import Make from "./components/Make";
-import Shop from "./components/Shop";
-import Magnifier from "./components/Magnifier";
-import Cart from "./components/Cart";
-import Profile from "./components/Profile";
+import FindingNemo from "./components/FindingNemo_Navigation";
+import Make from "./components/Make_Navigation";
+import Shop from "./components/Shop_Navigation";
+import Magnifier from "./components/Magnifier_Navigation";
+import Cart from "./components/Cart_Navigation";
+import Profile from "./components/Profile_Navigation";
 import "./AfterNavigation.css";
 
 const AfterNavigation = () => {

@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import "./Shop.css";
+import "./Shop_Navigation.css";
 
-const Shop = ({ className }) => {
+const Shop_Navigation = ({ className }) => {
     const navigate = useNavigate();
     
     const handleClick = () => {
@@ -15,8 +15,8 @@ const Shop = ({ className }) => {
   );
 };
 
-Shop.propTypes = {
+Shop_Navigation.propTypes = {
   className: PropTypes.string.isRequired,
 };
 
-export default Shop;
+export default Shop_Navigation;

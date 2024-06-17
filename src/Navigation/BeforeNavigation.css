@@ -11,27 +11,33 @@
   /* 네비게이션 바의 상단 여백과 중앙 정렬 */
   max-width: 1400px;
   /* 최대 너비를 설정하여 큰 화면에서도 중앙에 위치 */
+  box-sizing: border-box;
 }
 
 .BeforeNavigation .finding-nemo {
+  position: absolute;
+  left: 200px;
   display: flex;
-  align-items: center;
-  cursor: pointer;
-  /* 클릭 가능한 요소임을 나타내기 위해 커서 변경 */
+  /* width: 100px !important; */
+  /* top: 10px; */
 }
 
 .BeforeNavigation .finding-nemo .clownfish {
-  margin-top: -15px;
+  margin-top: 2px;
   height: 40px;
+  width: 40px;
+  margin-left: 0 !important;
   object-fit: cover;
 }
 
 .BeforeNavigation .finding-nemo .finding-nemo-text {
-  margin-top: 15px;
+  margin-top: 7px;
   margin-left: 0px;
   /* clownfish와 Finding Nemo 사이의 간격 */
   white-space: nowrap;
   /* 텍스트를 한 줄로 유지 */
+  cursor: pointer;
+  /* 클릭 가능한 요소임을 나타내기 위해 커서 변경 */
 }
 
 .BeforeNavigation .menu {
@@ -41,6 +47,7 @@
   /* Finding Nemo와 Shop 사이의 간격 */
   gap: 20px;
   /* Shop과 Make 사이의 간격 */
+  margin-left: 340px !important;
 }
 
 .BeforeNavigation .MAGNIFIER-instance {
