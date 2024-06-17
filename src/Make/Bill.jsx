@@ -67,7 +67,7 @@ const Bill = ({ images, totalPrice }) => {
         </div>
       </div>
       <div className='bill-info'>
-        <div className='total'>
+        <div className='bill-total'>
           <p id="comment">Total Price:</p>
           <p id="result">{totalPrice}$</p>
         </div>
