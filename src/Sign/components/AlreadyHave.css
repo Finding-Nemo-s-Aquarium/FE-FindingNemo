@@ -22,11 +22,11 @@
 }
 
 .signin {
-    color: #2845a3;
+    color: #0099DA;
     cursor: pointer;
     /* 클릭 가능하게 변경 */
 }
 
 .signin:hover {
-    color: #ff9500;
+    color: #3AC4FF;
 }
