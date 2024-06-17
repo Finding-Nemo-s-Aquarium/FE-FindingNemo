@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
-import FindingNemo from "./components/FindingNemo";
-import Make from "./components/Make";
-import Shop from "./components/Shop";
-import Magnifier from "./components/Magnifier";
-import SignIn from "./components/SignIn";
+import FindingNemo from "./components/FindingNemo_Navigation";
+import Make from "./components/Make_Navigation";
+import Shop from "./components/Shop_Navigation";
+import Magnifier from "./components/Magnifier_Navigation";
+import SignIn from "./components/SignIn_Navigation";
 import "./BeforeNavigation.css";
 
 const BeforeNavigation = () => {
