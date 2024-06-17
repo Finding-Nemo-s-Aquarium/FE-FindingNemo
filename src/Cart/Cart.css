@@ -22,10 +22,10 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 추가 */
 }
 #title{
-  font-family: 'Baloo 2', Helvetica, sans-serif;
+  font-family: 'Baloo ', Helvetica, sans-serif;
   font-size: 50px;
-  margin-top: 15%;
   position: relative;
+  text-align: center;
   color: white;
 }
 #itemlist{
@@ -50,16 +50,19 @@
   object-fit: cover;
   filter: blur(2px);
 }
-
-.cart-body {
-  width: 50%;
-  margin-top: 5%;
+.cart-body{
+  width:60%;
+  position: relative;
+  margin-top: 15%;
+}
+.cart-item-list {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 50px;
   border-radius: 50px;
   backdrop-filter: blur(5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  margin-bottom: 5%;
 }
 
 
@@ -93,16 +96,14 @@
 }
 
 .cart-total {
-    font-family: 'Baloo 2', Helvetica, sans-serif;
-
+  font-family: 'Baloo 2', Helvetica, sans-serif;
+  align-items: center;
   z-index: 2;
-  text-align: center;
-font-size: 30px;
-  width: 50%;
-  margin-top: 5%;
-  background-color: rgba(255, 255, 255, 0.8);
+  text-align: right;
+  font-size: 30px;
   padding: 50px;
   border-radius: 50px;
   backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
