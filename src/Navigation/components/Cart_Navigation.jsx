@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import "./Cart.css"
+import "./Cart_Navigation.css"
 
-const Cart = () => {
+const Cart_Navigation = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -13,4 +13,4 @@ const Cart = () => {
     );
 };
 
-export default Cart;
+export default Cart_Navigation;

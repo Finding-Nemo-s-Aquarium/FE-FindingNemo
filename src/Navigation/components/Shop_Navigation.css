@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400&display=swap');
 
-.MAKE {
+.SHOP {
     height: 56px;
     position: relative;
     width: 178px;
 }
 
-.MAKE .text-wrapper {
+.SHOP .text-wrapper {
     text-shadow: var(--navigation-bar);
     color: #ffffff;
     font-family: 'Baloo 2', Helvetica, sans-serif;
@@ -21,6 +21,6 @@
     cursor: pointer;
 }
 
-.MAKE:hover .text-wrapper {
+.SHOP:hover .text-wrapper {
     color: #ff9500;
 }

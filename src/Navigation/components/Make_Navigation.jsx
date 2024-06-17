@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import "./Make.css"
+import "./Make_Navigation.css"
 
-const Make = ({ className }) => {
+const Make_Navigation = ({ className }) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -16,8 +16,8 @@ const Make = ({ className }) => {
     );
 };
 
-Make.propTypes = {
+Make_Navigation.propTypes = {
     className: PropTypes.string.isRequired,
 };
 
-export default Make;
+export default Make_Navigation;
