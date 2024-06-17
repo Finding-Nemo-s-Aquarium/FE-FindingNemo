@@ -1,172 +1,200 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
 
-/* 기본 여백 제거 */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+  font-family: 'Kanit', sans-serif;
 }
 
-.screen {
-  background-color: #ffffff;
+.signup-container {
   display: flex;
-  justify-content: center;
-  width: 0%;
   height: 100vh;
 }
 
-.screen .overlap {
-  background-size: 100% 100%;
-  position: relative;
+.signup-left-panel {
+  width: 50%;
+  background-image: url('img/sign_goldfish.jpg');
+  background-size: cover;
+  background-position: right; /* 이미지의 오른쪽 부분만 보이도록 설정 */
+  background-repeat: no-repeat;
+}
+
+.signup-right-panel {
+  width: 50%;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #ffffff;
+  position: relative;
+  transform: scale(0.8); /* 전체적인 크기를 80%로 줄임 */
+
 }
 
-.screen .signup-format {
-  left: 137px;
-  position: absolute;
-  top: 120px;
-  width: 448px;
-}
-
-.screen .format-top {
-  height: 209px;
-  left: 2px;
-  position: absolute;
-  top: 0;
-  width: 370px;
-}
-
-.screen .clownfish {
-  height: 35px;
-  width: 35px;
-  left: 0;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-}
-
-.screen .FINDINGNEMO-text {
-  color: #2845a3;
-  font-family: 'Luckiest Guy', Helvetica, sans-serif;
-  font-size: 27px;
-  font-weight: 400;
-  height: 51px;
-  left: 10px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
+.input-container {
+  width: 100%;
+  max-width: 370px;
   text-align: center;
-  top: 3px;
-  width: 255px;
-  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.screen .Signup-text {
-  color: #000000;
-  font-family: 'Kanit', Helvetica, sans-serif;
-  font-size: 60px;
-  font-weight: 600;
-  height: 82px;
-  left: -30px;
-  letter-spacing: 0;
-  line-height: normal;
+.back-home {
   position: absolute;
-  text-align: center;
-  top: 55px;
-  white-space: nowrap;
-  width: 254px;
-}
-
-.screen .already-have-an-account {
-  position: absolute;
-  font-size: 20px;
-  top: 510px;
-  color: #999999;
-}
-
-.screen .signin-link {
+  top: 20px;
+  left: 20px;
   color: #2845a3;
   cursor: pointer;
 }
 
-.screen .signin-link:hover {
-  color: #ff9500;
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  /* clownfish와 signin 텍스트 사이의 간격 */
 }
 
-.screen .USERNAME,
-.screen .EMAIL,
-.screen .PASSWORD,
-.screen .NAME,
-.screen .ADDRESS,
-.screen .PHONE {
-  height: 111px;
-  width: 452px;
-  position: absolute;
-  font-size: 15px;
+.clownfish {
+  width: 30px;
+  margin-right:  10px;
+  /* 왼쪽으로 이동시키는 대신 오른쪽 마진 추가 */
 }
 
-.screen .USERNAME { top: 120px; }
-.screen .EMAIL { top: 180px; }
-.screen .PASSWORD { top: 240px; }
-.screen .NAME { top: 300px; }
-.screen .ADDRESS { top: 360px; }
-.screen .PHONE { top: 420px; }
-
-.screen .USERNAME-text,
-.screen .EMAIL-text,
-.screen .PASSWORD-text,
-.screen .NAME-text,
-.screen .ADDRESS-text,
-.screen .PHONE-text {
+.finding-nemo-text {
   color: #2845a3;
-  font-family: 'Kanit', Helvetica, sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  height: 37px;
-  left: 2px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: -5px;
-  width: 200px;
+  font-family: 'Luckiest Guy', sans-serif;
+  font-size: 1.5em;
 }
 
-.screen .input-box {
+.signup-text {
+  font-size: 50px !important;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  margin-left: -220px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-label {
+  margin-top: 10px;
+  color: #2845a3;
+  font-size: 15px;
+  text-align: left;
+}
+
+.input-box {
+  height: 20px;
+  padding: 10px;
+  margin-top: 7px;
+  border: 1px solid #2845a3;
+  border-radius: 10px;
+}
+
+.signup-button {
   height: 50px;
-  width: 380px;
-  background-color: #ffffff;
-  border: 2px solid;
-  border-color: #56679e;
-  border-radius: 17px;
-  left: 0;
-  position: absolute;
-  top: 25px;
+  margin-top: 55px;
+  background-color: #2845a3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9em;
+  /* 1em보다 작은 크기 */
 }
 
-.screen .SIGNUP-instance {
-  left: 0 !important;
-  position: absolute !important;
-  top: 480px !important;
+.signin-link {
+  color: #999999;
 }
 
-.screen .rectangle {
-  height: 729px;
-  left: 800px;
-  position: absolute;
-  top: 0;
-  width: 720px;
+.signin-link span {
+  color: #2845a3;
+  cursor: pointer;
 }
 
-.screen .group {
-  height: 37px;
-  left: 30px;
-  position: absolute;
-  top: 33px;
-  width: 173px;
+@media (max-width: 600px) {
+  .signup-container {
+    flex-direction: column;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+
+  .input-container {
+    padding: 20px;
+  }
+
+  .back-home {
+    top: 10px;
+    left: 10px;
+    font-size: 0.8em;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .signup-text {
+    font-size: 5vw;
+  }
 }
 
-.screen .back-to-home-instance {
-  width: unset !important;
+@media (min-width: 601px) and (max-width: 1024px) {
+  .signup-container {
+    flex-direction: row;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 50%;
+  }
+
+  .input-container {
+    padding: 20px;
+  }
+
+  .back-home {
+    top: 15px;
+    left: 15px;
+    font-size: 1em;
+  }
+
+  .signup-text {
+    font-size: 6vw;
+  }
+}
+
+@media (min-width: 1025px) {
+  .signup-container {
+    flex-direction: row;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 50%;
+  }
+
+  .input-container {
+    padding: 40px;
+  }
+
+  .back-home {
+    top: 20px;
+    left: 20px;
+    font-size: 1.2em;
+  }
+
+  .signup-text {
+    font-size: 70px;
+  }
 }
