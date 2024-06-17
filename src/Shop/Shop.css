@@ -52,6 +52,10 @@
     cursor: pointer;
 }
 
+.category-title:hover {
+    color: #ff9500;
+}
+
 .category-items {
     font-family: 'Baloo 2', Helvetica, sans-serif;
     display: flex;
@@ -65,6 +69,10 @@
     font-size: 18px;
     color: #678BFF;
     margin: 5px;
+}
+
+.category-item:hover {
+    color: #ff9500;
 }
 
 .gallery {

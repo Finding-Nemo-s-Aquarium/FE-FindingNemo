@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
 
 .signup-button {
-    background-color: #2845a3;
+    background-color: #0099DA;
     border-radius: 17px;
     height: 40px;
     width: 370px;
@@ -13,7 +13,7 @@
 }
 
 .signup-button:hover {
-    background-color: #1f3a82;
+    background-color: #3AC4FF;
 }
 
 .text-wrapper {

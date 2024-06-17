@@ -35,7 +35,7 @@ body {
 
 }
 
-.input-container {
+.signup-container .input-container {
   width: 100%;
   max-width: 370px;
   text-align: center;
@@ -44,65 +44,65 @@ body {
   align-items: center;
 }
 
-.back-home {
+.signup-container .back-home {
   position: absolute;
   top: 20px;
   left: 20px;
-  color: #2845a3;
+  color: #0099DA;
   cursor: pointer;
 }
 
-.header {
+.signup-container .header {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
   /* clownfish와 signin 텍스트 사이의 간격 */
 }
 
-.clownfish {
+.signup-container .clownfish {
   width: 30px;
   margin-right:  10px;
   /* 왼쪽으로 이동시키는 대신 오른쪽 마진 추가 */
 }
 
-.finding-nemo-text {
-  color: #2845a3;
+.signup-container .finding-nemo-text {
+  color: #0099DA;
   font-family: 'Luckiest Guy', sans-serif;
   font-size: 1.5em;
 }
 
-.signup-text {
+.signup-container .signup-text {
   font-size: 50px !important;
   margin-top: -10px;
   margin-bottom: 20px;
   margin-left: -220px;
 }
 
-.signup-form {
+.signup-container .signup-form {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.input-label {
+.signup-container .input-label {
   margin-top: 10px;
-  color: #2845a3;
+  color: #0099DA;
   font-size: 15px;
   text-align: left;
 }
 
-.input-box {
+.signup-container .input-box {
   height: 20px;
   padding: 10px;
   margin-top: 7px;
-  border: 1px solid #2845a3;
+  border: 1px solid #0099DA;
   border-radius: 10px;
 }
 
 .signup-button {
   height: 50px;
   margin-top: 55px;
-  background-color: #2845a3;
+  background-color: #0099DA;
   color: white;
   border: none;
   border-radius: 10px;
@@ -116,7 +116,7 @@ body {
 }
 
 .signin-link span {
-  color: #2845a3;
+  color: #0099DA;
   cursor: pointer;
 }
 

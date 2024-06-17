@@ -6,7 +6,7 @@
     height: 37px;
     text-align: center;
     font-size: 20px;
-    color: #2845a3;
+    color: #0099DA;
     font-family: Kanit;
 }
 
@@ -25,5 +25,5 @@
 }
 
 .backToHome:hover .backToHome-text {
-    color: #ff9500;
+    color: #3AC4FF;
 }

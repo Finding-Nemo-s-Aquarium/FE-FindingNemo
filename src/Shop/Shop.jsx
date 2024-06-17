@@ -7,6 +7,7 @@ import "./Shop.css";
 
 const Shop = ({ isLoggedIn }) => {
     const [selectedCategory, setSelectedCategory] = useState(null);
+    const [selectedSubCategory, setSelectedSubCategory] = useState(null);
     const [selectedItem, setSelectedItem] = useState(null);
 
     //const navigate = useNavigate();
@@ -42,11 +43,17 @@ const Shop = ({ isLoggedIn }) => {
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
+        setSelectedSubCategory(null); // 카테고리를 클릭하면 선택된 서브카테고리 초기화
         setSelectedItem(null); // 카테고리를 클릭하면 선택된 아이템을 초기화
     };
 
     const handleItemClick = (item) => {
         setSelectedItem(item);
+    };
+
+    const handleSubCategoryClick = (subCategory) => {
+        setSelectedSubCategory(subCategory); // 서브카테고리 설정
+        setSelectedItem(null); // 서브카테고리를 클릭하면 선택된 아이템 초기화
     };
 
     const handleAddToCart = async (name, amount) => {
@@ -122,7 +129,7 @@ const Shop = ({ isLoggedIn }) => {
                                     <div 
                                         className="category-item" 
                                         key={item.name} 
-                                        onClick={() => handleItemClick(item)}
+                                        onClick={() => handleSubCategoryClick(item.name)}
                                     >
                                         {item.name}
                                     </div>
@@ -141,6 +148,12 @@ const Shop = ({ isLoggedIn }) => {
                         onAddToCart={handleAddToCart}
                         isLoggedIn={isLoggedIn}
                     />
+                ) : selectedSubCategory ? (
+                    allItems.filter(item => item.name === selectedSubCategory).map(item => (
+                        <div className="gallery-item" key={item.name}>
+                            <img src={item.src} alt={item.name} onClick={() => handleItemClick(item)} />
+                        </div>
+                    ))
                 ) : selectedCategory ? (
                     categories[selectedCategory].map(item => (
                         <div className="gallery-item" key={item.name}>
